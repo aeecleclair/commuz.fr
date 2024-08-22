@@ -109,32 +109,9 @@ name="Pascal Ray &ndash; Directeur de l'École Centrale de Lyon depuis 2021"
   </div>
 </template>
 
-<script>
-import Pane from '~/components/Pane.vue';
-import Sponsors from '~/components/Sponsors.vue';
-
-const data = {
-  presentation:
-    "<h2>La Commuz', c'est quoi ?</h2>" +
-    "<p>La Commuz' est une comédie musicale organisée chaque année depuis 20 ans par une équipe de près de 100 étudiants de l'École Centrale de Lyon et de l'EMLyon.</p>" +
-    "<p>La Commuz’ réunit chaque année plus de 1200 spectateurs lors des soirées de spectacle au mois de mars. </p>",
-  SpectacleAaZ:
-    "<h2>Un spectacle imaginé de A à Z</h2>" +
-    "<p>De l'élaboration du scénario en passant par les chorégraphies, la composition et l'orchestration des musiques, la mise en place de l'éclairage et du son, la création des costumes et des décors&hellip;</p>" +
-    "<p>Tous les corps de métier du théâtre, du chant et de la danse sont réunis pour créer ce spectacle qui se veut d'une qualité professionnelle.</p>",
-};
-
-export default defineComponent({
-  setup() {
-    definePageMeta({
-      layout: 'home',
-      components: { Sponsors, Pane }
-    });
-  },
-  data: function () {
-    return data;
-  },
-
+<script lang="ts" setup>
+definePageMeta({
+  layout: "home",
 });
 </script>
 
