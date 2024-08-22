@@ -8,6 +8,10 @@ html {
   overflow-y: scroll;
   overflow-x: auto;
   scroll-behavior: smooth;
+
+  // We use scroll-snap-type to make the homepage scroll snap to the top of the content, just after the video
+  scroll-snap-type: y proximity;
+  height: 100vh;
 }
 
 @font-face {
