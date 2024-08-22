@@ -7,9 +7,85 @@ name="description"
 
     <IndexVideoTitle />
 
-    <!-- Description -->
-    <pane :type="'pane--left'" :bg-image="'/images/homepage/danseurs-2019.jpg'" :text="presentation" />
-    <pane :type="'pane--right'" :bg-image="'/images/homepage/spectacleAaZ.jpg'" :text="SpectacleAaZ" />
+
+    <div class="flex flex-col gap-4 px-40 snap-start">
+
+
+
+
+      <UCard class="group py-10 my-5">
+        <div class="flex flex-col items-center justify-center text-primary">
+          <span class="text-xl text-gray-700">La Commuz' présente son spectacle 2024</span>
+
+          <span
+            class="text-5xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-size-200 bg-pos-0 text-transparent group-hover:bg-pos-100 bg-clip-text mt-3">
+            BACKSTAGE
+          </span>
+
+          <ULink to="/2024" active-class="text-primary"
+            inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 mt-4">
+            <span class="flex flex-row items-center space-x-2"><span>En savoir plus </span>
+              <UIcon name="i-heroicons-arrow-long-right-solid" />
+            </span>
+          </ULink>
+        </div>
+      </UCard>
+
+      <HeroCarousel title=" La Commuz', c'est quoi ?" :images="[
+        '/AaZ/IMG_1547.jpg',
+        '/AaZ/IMG_2246.jpg',
+        '/AaZ/IMG_5434.jpg',
+        '/AaZ/IMG_5917.jpg',
+        '/AaZ/IMG_6097.jpg',
+        '/AaZ/IMG_6154.jpg',
+      ]">
+        <p>
+          La Commuz' est une comédie musicale organisée chaque année depuis 20 ans par une équipe de près de 100
+          étudiant&#183;e&#183;s de l'École Centrale de Lyon et de l'emlyon business school.
+        </p>
+        <p>
+          La Commuz’ réunit chaque année plus de 1 200 spectateurs lors de quatre soirées de représentations au mois de
+          mars.
+        </p>
+      </HeroCarousel>
+
+      <HeroCarousel title="Un spectacle imaginé de A à Z" :reversed="true" :images="[
+        '/AaZ/IMG_1547.jpg',
+        '/AaZ/IMG_2246.jpg',
+        '/AaZ/IMG_5434.jpg',
+        '/AaZ/IMG_5917.jpg',
+        '/AaZ/IMG_6097.jpg',
+        '/AaZ/IMG_6154.jpg',
+      ]">
+        <p>
+          De l'élaboration du scénario en passant par les chorégraphies, la composition et l'orchestration des musiques,
+          la mise en place de l'éclairage et du son, la création des costumes et des décors…
+        </p>
+        <p>
+          Tous les corps de métier du théâtre, du chant et de la danse sont réunis pour créer ce spectacle qui se veut
+          d'une qualité professionnelle.
+        </p>
+      </HeroCarousel>
+
+      <HeroCarousel title="Deux écoles, un projet commun" :images="[
+        '/AaZ/IMG_1547.jpg',
+        '/AaZ/IMG_2246.jpg',
+        '/AaZ/IMG_5434.jpg',
+        '/AaZ/IMG_5917.jpg',
+        '/AaZ/IMG_6097.jpg',
+        '/AaZ/IMG_6154.jpg',
+      ]">
+        <p>
+          100 élèves aux talents variés issus de l'emlyon business school et de l'École Centrale de Lyon travaillent
+          pendant un an pour offrir un spectacle unique.
+        </p>
+        <p>
+          Du recrutement de l'équipe, à la fermeture du dernier rideau, chaque membre contribue au caractère authentique
+          et inédit de ce grand projet.
+        </p>
+      </HeroCarousel>
+    </div>
+
     <!-- Témoignages -->
     <section id="testimonial">
       <IndexQuote
