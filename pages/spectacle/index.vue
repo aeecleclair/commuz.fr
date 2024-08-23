@@ -1,25 +1,24 @@
 <template lang="html">
-  <title>La Commuz' - Spectacle</title>
-  <Meta name="description" content="La Commuz existe depuis plus de 20 ans." />
   <div>
+    <title>La Commuz' - Spectacle</title>
+    <Meta name="description" content="La Commuz existe depuis plus de 20 ans." />
+
     <!-- Editions de  l'année -->
 
-    <pane
-id="infos" type="pane--media" image="/images/affiches/affiche--2024.png"
-      bg-image="/images/equipes/equipe--2024.jpg" :text="infos"/>
+    <SpectacleAnnee id="infos" image="/images/affiches/affiche--2024.png" bg-image="/images/equipes/equipe--2024.jpg"
+      :text="infos" />
 
     <!-- Les éditions précédentes -->
     <div id="precedentes">
       <h2>Éditions précédentes</h2>
       <a v-for="(annee, id) in anneesPassees" :key="id" class="inline-link" :href="'#' + annee.annee">{{ annee.annee
-      }}</a>
+        }}</a>
     </div>
 
-    <div v-for="(annee, id) in anneesPassees">
-      <pane
-:id="annee.annee" :key="id" :type="'pane--media'" :bg-image="annee.bgImage" :image="annee.image"
-        :text="annee.text" :galerie="annee.galerie" :equipe="annee.equipe" :deezer="annee.deezer" :youtube="annee.youtube"
-        :spotify="annee.spotify" :annee="annee.annee"/>
+    <div v-for="(annee, id) in anneesPassees" :key="id">
+      <SpectacleAnnee :id="annee.annee" :key="id" :bg-image="annee.bgImage" :image="annee.image" :text="annee.text"
+        :galerie="annee.galerie" :equipe="annee.equipe" :deezer="annee.deezer" :youtube="annee.youtube"
+        :spotify="annee.spotify" :annee="annee.annee" />
     </div>
   </div>
 </template>
