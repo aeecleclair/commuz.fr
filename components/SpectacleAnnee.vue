@@ -4,50 +4,23 @@
       <img v-if="type == 'pane--media-left'" class="pane__img" :src="image">
       <div class="pane__text">
         <div v-html='text' />
-        <div v-if="galerie || equipe || youtube" class="annee__links" style="justify-content: center" width="100%">
-          <table>
-            <tr align="center">
-              <table cellspacing="10">
-                <th>
-                  <div v-if='deezer != ""'>
-                    <a :href="deezer" @click="navigate">
-                      <img src="/icons/Deezer.png" alt=""></a>
-                  </div>
-                </th>
-                <th>
-                  <div v-if='youtube != ""'>
-                    <a :href="youtube" @click="navigate">
-                      <img src="/icons/Youtube.png" alt=""></a>
-                  </div>
-                </th>
-                <th>
-                  <div v-if='spotify != ""'>
-                    <a :href="spotify" @click="navigate">
-                      <img src="/icons/Spotify.png" alt=""></a>
-                  </div>
-                </th>
-              </table>
-            </tr>
-            <tr align="center">
-              <table>
-                <th>
-                  <div v-if="galerie" class="button-link">
-                    <router-link class="" :to="`/galerie/${annee}`"><img src="/icons/galerie.svg" alt="">Voir les
-                      photos</router-link>
-                  </div>
-                </th>
-                <th>
-                  <div v-if="equipe" class="button-link">
-                    <router-link class="" :to="`/equipe/${annee}`"><img src="/icons/equipe.svg" alt="">Voir
-                      l'équipe</router-link>
-                  </div>
-                </th>
-              </table>
-            </tr>
-          </table>
+
+        <div class="flex flex-col lg:flex-row lg:gap-2 mt-4">
+          <AnimatedButton v-if="galerie" text="Voir les photos" :to="`/galerie/${annee}`" icon="i-heroicons-camera" />
+          <AnimatedButton v-if="equipe" text="Voir l'équipe" :to="`/equipe/${annee}`" icon="i-heroicons-users" />
+        </div>
+
+        <div v-if="galerie || equipe || youtube">
+          <div class="flex flex-col lg:flex-row lg:gap-2">
+            <AnimatedButton v-if="youtube" text="Voir sur YouTube" :to="youtube" icon="i-ph-youtube-logo" />
+
+            <AnimatedButton v-if="deezer" text="Écouter sur Deezer" :to="deezer" icon="i-simple-icons-deezer" />
+            <AnimatedButton v-if="spotify" text="Écouter sur Spotify" :to="spotify" icon="i-ph-spotify-logo" />
+          </div>
+
         </div>
       </div>
-      <img v-if="type == 'pane--media'" class="pane__img" :src="image">
+      <img class="pane__img" :src="image">
 
 
     </div>
@@ -62,11 +35,11 @@ defineProps<{
   image: string,
   text: string,
   type: string,
-  galerie: boolean,
-  equipe: boolean,
-  deezer: string,
-  youtube: string,
-  spotify: string,
+  galerie?: boolean,
+  equipe?: boolean,
+  deezer?: string,
+  youtube?: string,
+  spotify?: string,
   annee: number
 }>();
 </script>
