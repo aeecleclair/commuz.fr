@@ -3,37 +3,36 @@
     <img id="footer__logo" src="/logos/commuz-masque-logo-gris.png" alt="Logo Commuz' Noir">
     <div id="social">
       <ul>
-        <li><a
-class="inline-link" target="_blank" rel="noopener"
+        <li><a class="inline-link" target="_blank" rel="noopener"
             href="https://www.facebook.com/commuzlyon">Facebook</a>
         </li>
-        <li><a
-class="inline-link" target="_blank" rel="noopener"
+        <li><a class="inline-link" target="_blank" rel="noopener"
             href="https://www.instagram.com/commuzlyon/">Instagram</a></li>
-        <li><a
-class="inline-link" target="_blank" rel="noopener"
-            href="https://www.youtube.com/channel/UCDZ2LRLcQB0MZ6hkB_RNDuQ">Youtube</a></li>
-        <li><a
-class="inline-link" target="_blank" rel="noopener"
-            href="https://www.linkedin.com/company/commuz">Linkedin</a></li>
+        <li><a class="inline-link" target="_blank" rel="noopener"
+            href="https://www.youtube.com/channel/UCDZ2LRLcQB0MZ6hkB_RNDuQ">YouTube</a></li>
+        <li><a class="inline-link" target="_blank" rel="noopener"
+            href="https://www.linkedin.com/company/commuz">LinkedIn</a></li>
+        <li>
+          <NuxtLink class="inline-link" to="/links">
+            Nos liens
+          </NuxtLink>
+        </li>
       </ul>
     </div>
     <div id="legal">
       <h3>Mentions légales</h3>
-      <p>La Commuz' est un projet artistique commun à l'École centrale de Lyon et à emlyon business school.<br >
+      <p>La Commuz' est un projet artistique commun à l'École centrale de Lyon et à emlyon business school.<br>
         Elle constitue également un club artistique de l'Association des Élèves de l'École Centrale de Lyon.</p>
     </div>
     <div id="contact">
       <h3>Contacts</h3>
-      <p>Pour toute question, contactez <a
-class="inline-link"
-          href="mailto:pierrick.durand-glouchkoff@etu.ec-lyon.fr; johanna.dussoux@edu.em-lyon.com">Pierrick, Johanna, Vincent et Romain</a>
+      <p>Pour toute question, contactez <a class="inline-link"
+          href="mailto:pierrick.durand-glouchkoff@etu.ec-lyon.fr; johanna.dussoux@edu.em-lyon.com">Pierrick, Johanna,
+          Vincent et Romain</a>
         par
-        mail ou sur notre page <a
-class="inline-link" target="_blank" rel="noopener"
-          href="https://www.facebook.com/commuzlyon">Facebook</a>. <br >
-        Pour toute demande relative aux partenariats, contactez notre responsable partenariats <a
-class="inline-link"
+        mail ou sur notre page <a class="inline-link" target="_blank" rel="noopener"
+          href="https://www.facebook.com/commuzlyon">Facebook</a>. <br>
+        Pour toute demande relative aux partenariats, contactez notre responsable partenariats <a class="inline-link"
           href="mailto:partenariat@commuz.fr">Gwladys</a>.</p>
     </div>
   </footer>
