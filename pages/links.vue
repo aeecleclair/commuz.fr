@@ -11,16 +11,18 @@
       <UCard class="group">
         <div class="w-96 flex flex-col items-center">
           <span
-            class="text-6xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-size-200 bg-pos-0 text-transparent group-hover:bg-pos-100 bg-clip-text"
-          >
+            class="text-6xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-size-200 bg-pos-0 text-transparent group-hover:bg-pos-100 bg-clip-text">
             CASTINGS
           </span>
-          <div class="flex flex-row items-center space-x-2 caviar text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500">
+          <div
+            class="flex flex-row items-center space-x-2 caviar text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500">
             La Commuz' recrute, rejoignez l'aventure !
           </div>
           <div class="flex flex-row items-center space-x-2 mt-4">
-            <span class="text-sm caviar text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500">En savoir plus</span>
-            <UIcon name="i-heroicons-arrow-right" class="w-4 h-4 mx-2 text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500" />
+            <span class="text-sm caviar text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500">En
+              savoir plus</span>
+            <UIcon name="i-heroicons-arrow-right"
+              class="w-4 h-4 mx-2 text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500" />
           </div>
         </div>
       </UCard>
@@ -85,7 +87,7 @@ const links = [
   },
   {
     icon: 'i-ph-linkedin-logo',
-    text: 'Linkedln',
+    text: 'LinkedIn',
     link: 'https://www.linkedin.com/company/commuz',
   },
 ];

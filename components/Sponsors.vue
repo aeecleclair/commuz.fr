@@ -9,7 +9,7 @@
 
     </div>
     <div id="sponsors__logos">
-      <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener"><img src="/sponsors/ecl.svg"
+      <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener"><img src="/sponsors/ecl.png"
           alt="Logo de l'École Centrale de Lyon"></a>
       <a href="https://www.em-lyon.com" target="_blank" rel="noopener"><img src="/sponsors/em_corpo.svg"
           alt="Logo de la corpo emlyon business school"></a>
