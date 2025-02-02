@@ -6,10 +6,7 @@
 
     <IndexVideoTitle />
 
-    <div class="flex flex-col gap-40 px-40 mt-30 pt-10 mb-40 snap-start">
-
-
-
+    <div class="flex flex-col gap-40 px-10 md:px-40 mt-30 pt-10 mb-40 snap-start">
 
       <UCard class="group py-10 my-5">
         <div class="flex flex-col items-center justify-center text-primary">
@@ -92,7 +89,7 @@
 
       <!-- Témoignages -->
       <UCard
-        class="group py-10 flex flex-col items-center justify-center bg-gradient-to-tr from-commuz-900 to-commuz-500 border-none">
+        class="group py-10 flex flex-col items-center justify-center bg-gradient-to-tr from-commuz-900 to-commuz-500 border-none px-10">
         <IndexQuote name="Frank Debouck &ndash; Directeur de l'École Centrale de Lyon entre 2011 et 2021"
           img-src="/images/homepage/debouck.jpg">
           J'ai pris hier soir un grand plaisir, le spectacle est de grande qualité, son, lumière, costumes magnifiques,
