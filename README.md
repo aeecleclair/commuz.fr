@@ -60,6 +60,12 @@ In [layouts/default.vue](./layouts/default.vue) you will be able to configure gl
 
 - by settings `castingOpen` to true, the website will advertise its casting page. You should set this during the castings phases, but disable it the rest of the year, to prevent unnecessary informations. The majority of /castings pages should not be really relevant for people outside our schools
 
+## Integrate a YouTube video
+
+You will need to integrate YouTube videos for the trailer. We use for this the incredible [NuxtScripts](https://scripts.nuxt.com/) tool.
+
+See [YouTube Player](https://scripts.nuxt.com/scripts/content/youtube-player) guide for more informations
+
 # TODO :
 
 - Rajouter une banière pour pouvoir opt-out du tracking Google Analytics
