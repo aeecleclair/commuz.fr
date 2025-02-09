@@ -4,7 +4,7 @@
     <Meta name="description" content="Venez soutenir la Commuz en devenant partenaire." />
     <div>
       <div id="plaquette">
-        <p>Téléchargez notre <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz'_2025.pdf"
+        <p>Téléchargez notre <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf"
             download>plaquette
             partenariats</a>,
           ou
