@@ -17,7 +17,7 @@
             BACKSTAGE
           </span>
 
-          <ULink to="/2024" active-class="text-primary"
+          <ULink to="/spectacle/2025" active-class="text-primary"
             inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 mt-4">
             <span class="flex flex-row items-center space-x-2"><span>En savoir plus </span>
               <UIcon name="i-heroicons-arrow-long-right-solid" />
