@@ -64,7 +64,13 @@ In [layouts/default.vue](./components/NavBar.vue) you will be able to configure 
 
 You will need to integrate YouTube videos for the trailer. We use for this the incredible [NuxtScripts](https://scripts.nuxt.com/) tool.
 
-See [YouTube Player](https://scripts.nuxt.com/scripts/content/youtube-player) guide for more informations
+To easily integrate a YouTube video, there is a component which import the player, add the thumbnail and a Youtube icon:
+
+```html
+<YoutubeVideo class="h-96" videoId="0in9oBqaI0I" />
+```
+
+don't forger to fix its size (for example `h-96`)
 
 ## Fonts
 
