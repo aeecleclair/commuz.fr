@@ -61,7 +61,8 @@ a {
 
 // typography
 
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Merriweather');
+@import url(https://fonts.bunny.net/css?family=alegreya-sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i);
+@import url(https://fonts.bunny.net/css?family=merriweather:300,300i,400,400i,700,700i,900,900i);
 
 h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
@@ -71,7 +72,7 @@ body {
   font-size: 18px;
 }
 
-p, span, dt, dd, a {
+p, span, dt, dd, a, div {
   font-family: 'Alegreya Sans', sans-serif;
 }
 

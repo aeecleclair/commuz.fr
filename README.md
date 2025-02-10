@@ -66,6 +66,10 @@ You will need to integrate YouTube videos for the trailer. We use for this the i
 
 See [YouTube Player](https://scripts.nuxt.com/scripts/content/youtube-player) guide for more informations
 
+## Fonts
+
+If you need to import fonts, I suggest to use fonts.bunny.net which is more privacy friendly than Google Font
+
 # TODO :
 
 - Rajouter une banière pour pouvoir opt-out du tracking Google Analytics
