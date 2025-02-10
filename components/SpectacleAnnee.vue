@@ -8,7 +8,7 @@
         <div class="flex flex-col lg:flex-row lg:gap-2 mt-4">
           <AnimatedButton v-if="galerie" text="Voir les photos" :to="`/galerie/${annee}`" icon="i-heroicons-camera" />
           <AnimatedButton v-if="equipe" text="Voir l'équipe" :to="`/equipe/${annee}`" icon="i-heroicons-users" />
-          <AnimatedButton v-if="page" text="Le spectacle" :to="`/spectacle/${annee}`" icon="i-heroicons-users" />
+          <AnimatedButton v-if="page" text="Le spectacle" :to="`/spectacle/${annee}`" icon="i-heroicons-ticket" />
         </div>
 
         <div v-if="galerie || equipe || youtube">
