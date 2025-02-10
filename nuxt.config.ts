@@ -22,7 +22,9 @@ export default defineNuxtConfig({
 
   vue: {
     compilerOptions: {
-      isCustomElement: (tag) => ["Nuxt"].includes(tag),
+      // tag.startsWith('add-') is used for https://add-to-calendar-button.com/
+      isCustomElement: (tag) =>
+        ["Nuxt"].includes(tag) || tag.startsWith("add-"),
     },
   },
 
