@@ -1,13 +1,14 @@
 <template lang="html">
   <div class="pane--media">
     <div class="pane__text_container">
-      <img v-if="type == 'pane--media-left'" class="pane__img" :src="image">
+      <img v-if="type == 'pane--media-left'" class="pane__img" :srnpmc="image">
       <div class="pane__text">
         <div v-html='text' />
 
         <div class="flex flex-col lg:flex-row lg:gap-2 mt-4">
           <AnimatedButton v-if="galerie" text="Voir les photos" :to="`/galerie/${annee}`" icon="i-heroicons-camera" />
           <AnimatedButton v-if="equipe" text="Voir l'équipe" :to="`/equipe/${annee}`" icon="i-heroicons-users" />
+          <AnimatedButton v-if="page" text="Le spectacle" :to="`/spectacle/${annee}`" icon="i-heroicons-users" />
         </div>
 
         <div v-if="galerie || equipe || youtube">
@@ -26,6 +27,7 @@
     </div>
 
     <img v-if="bgImage != ''" class="pane__bg" :src="bgImage">
+
   </div>
 </template>
 
@@ -37,6 +39,7 @@ defineProps<{
   type: string,
   galerie?: boolean,
   equipe?: boolean,
+  page?: boolean,
   deezer?: string,
   youtube?: string,
   spotify?: string,
