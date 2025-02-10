@@ -18,6 +18,7 @@
     "@nuxt/image": "^1.7.0",
     "@nuxt/scripts": "^0.10.1",
     "@nuxt/ui": "^2.18.4",
+    "@nuxtjs/leaflet": "^1.2.6",
     "@types/youtube": "^0.1.0",
     "@unhead/vue": "^1.11.18",
     "eslint": "^8.57.0",
