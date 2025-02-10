@@ -33,6 +33,7 @@
     "vue-router": "^4.4.3"
   },
   "dependencies": {
+    "add-to-calendar-button": "^2.8.1",
     "animejs": "^3.2.2",
     "vue-carousel-3d": "^1.0.1",
     "vue-easy-lightbox": "^1.19.0",
