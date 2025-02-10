@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/eslint",
     "@nuxt/ui",
+    "@nuxt/scripts",
+    "@nuxtjs/leaflet",
   ],
 
   image: {
@@ -21,7 +23,9 @@ export default defineNuxtConfig({
 
   vue: {
     compilerOptions: {
-      isCustomElement: (tag) => ["Nuxt"].includes(tag),
+      // tag.startsWith('add-') is used for https://add-to-calendar-button.com/
+      isCustomElement: (tag) =>
+        ["Nuxt"].includes(tag) || tag.startsWith("add-"),
     },
   },
 

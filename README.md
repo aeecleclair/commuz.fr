@@ -56,9 +56,25 @@ Change the file `public/videos/video-intro.webm`
 
 ## Configure the website status
 
-In [layouts/default.vue](./layouts/default.vue) you will be able to configure global variables.
+In [layouts/default.vue](./components/NavBar.vue) you will be able to configure global variables.
 
 - by settings `castingOpen` to true, the website will advertise its casting page. You should set this during the castings phases, but disable it the rest of the year, to prevent unnecessary informations. The majority of /castings pages should not be really relevant for people outside our schools
+
+## Integrate a YouTube video
+
+You will need to integrate YouTube videos for the trailer. We use for this the incredible [NuxtScripts](https://scripts.nuxt.com/) tool.
+
+To easily integrate a YouTube video, there is a component which import the player, add the thumbnail and a Youtube icon:
+
+```html
+<YoutubeVideo class="h-96" videoId="0in9oBqaI0I" />
+```
+
+don't forger to fix its size (for example `h-96`)
+
+## Fonts
+
+If you need to import fonts, I suggest to use fonts.bunny.net which is more privacy friendly than Google Font
 
 # TODO :
 

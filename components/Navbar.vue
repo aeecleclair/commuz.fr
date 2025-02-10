@@ -9,7 +9,7 @@
         <NuxtLink active-class="navbar__link--active" to="/castings" class="navbar__link">Castings</NuxtLink>
       </li>
       <li class="navbar__item">
-        <NuxtLink active-class="navbar__link--active" to="/commuz2024" class="navbar__link">Commuz' 2024</NuxtLink>
+        <NuxtLink active-class="navbar__link--active" to="/spectacle/2024" class="navbar__link">Commuz' 2024</NuxtLink>
       </li>
       <li class="navbar__item">
         <NuxtLink active-class="navbar__link--active" to="/spectacle" class="navbar__link">Le spectacle</NuxtLink>
@@ -32,7 +32,7 @@
 Set `castingOpen` to true to enable the casting page link in the navigation bar. It will also show a card "La Commuz' recrute" on the main page
 */
 const castingOpen = useState('castingOpen')
-castingOpen.value = true
+castingOpen.value = false
 </script>
 
 <style lang="scss">

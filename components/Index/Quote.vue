@@ -5,7 +5,8 @@
         </p>
         <img src="/icons/quote_open.svg">
         <div class="quote__author">
-            <img :src="imgSrc" alt="Photo de {{name}}">
+            <UAvatar :src="imgSrc" alt="Photo de {{name}}" size="lg" class="mr-4" />
+
             <span>{{ name }}</span>
         </div>
     </div>
@@ -13,7 +14,6 @@
 
 <script setup lang="ts">
 defineProps<{
-    quote: string
     name: string
     imgSrc: string
 }>()

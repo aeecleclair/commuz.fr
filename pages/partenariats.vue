@@ -4,7 +4,10 @@
     <Meta name="description" content="Venez soutenir la Commuz en devenant partenaire." />
     <div>
       <div id="plaquette">
-        <p>Téléchargez la <a class="inline-link" href="/Plaquette-2024.pdf" download>plaquette sponsors</a>, ou
+        <p>Téléchargez notre <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf"
+            download>plaquette
+            partenariats</a>,
+          ou
           contactez
           notre responsable partenariat Gwladys à l'adresse <a
             href="mailto:partenariat@commuz.fr">partenariat@commuz.fr</a></p>
@@ -38,13 +41,10 @@
 
       </div>
 
-      <div style="text-align:center; margin:2em">
+      <div class="m-8 flex flex-col items-center">
         <h2>Les coulisses de la Commuz' 2023</h2>
-        <iframe
-class="youtube" src="https://www.youtube.com/embed/0in9oBqaI0I?si=p0K2z6m5mEhMX8VJ"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen />
+
+        <YoutubeVideo class="md:h-96" videoId="0in9oBqaI0I" />
       </div>
 
 
