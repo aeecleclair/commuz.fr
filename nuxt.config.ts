@@ -1,13 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
-  modules: [
-    "nuxt-gtag",
-    "vue3-carousel-nuxt",
-    "@nuxt/image",
-    "@nuxt/eslint",
-    "@nuxt/ui",
-  ],
+  modules: ["nuxt-gtag", "vue3-carousel-nuxt", "@nuxt/image", "@nuxt/eslint", "@nuxt/ui", "@nuxt/scripts"],
 
   image: {
     format: ["webp"],
