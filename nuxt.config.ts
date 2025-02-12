@@ -1,7 +1,15 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
-  modules: ["nuxt-gtag", "vue3-carousel-nuxt", "@nuxt/image", "@nuxt/eslint", "@nuxt/ui", "@nuxt/scripts"],
+  modules: [
+    "nuxt-gtag",
+    "vue3-carousel-nuxt",
+    "@nuxt/image",
+    "@nuxt/eslint",
+    "@nuxt/ui",
+    "@nuxt/scripts",
+    "nuxt-security",
+  ],
 
   image: {
     format: ["webp"],
@@ -16,6 +24,14 @@ export default defineNuxtConfig({
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ["Nuxt"].includes(tag),
+    },
+  },
+
+  security: {
+    headers: {
+      contentSecurityPolicy: {
+        "script-src": ["https://plausible.eclair.ec-lyon.fr"],
+      },
     },
   },
 
