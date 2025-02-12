@@ -6,5 +6,6 @@
   </div>
 </template>
 
-<style lang="scss"></style>
-
+<script setup lang="ts">
+useEclairPlausible()
+</script>
