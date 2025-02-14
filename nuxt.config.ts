@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/ui",
     "@nuxt/scripts",
-    "nuxt-security",
   ],
 
   image: {
