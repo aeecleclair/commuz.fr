@@ -27,14 +27,6 @@ export default defineNuxtConfig({
     },
   },
 
-  security: {
-    headers: {
-      contentSecurityPolicy: {
-        "script-src": ["https://plausible.eclair.ec-lyon.fr"],
-      },
-    },
-  },
-
   app: {
     head: {
       meta: [
