@@ -44,7 +44,7 @@
       <div class="m-8 flex flex-col items-center">
         <h2>Les coulisses de la Commuz' 2023</h2>
 
-        <YoutubeVideo class="md:h-96" videoId="0in9oBqaI0I" />
+        <YouTubeVideo class="md:h-96" videoId="0in9oBqaI0I" />
       </div>
 
 
