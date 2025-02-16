@@ -21,6 +21,10 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/global.scss"],
 
+  colorMode: {
+    preference: "dark",
+  },
+
   vue: {
     compilerOptions: {
       // tag.startsWith('add-') is used for https://add-to-calendar-button.com/

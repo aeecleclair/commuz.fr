@@ -8,7 +8,7 @@
 
     <div class="flex flex-col gap-40 px-10 md:px-40 mt-30 pt-10 mb-40 snap-start">
 
-      <UCard class="group py-10 my-5">
+      <UCard class="group py-10 my-5" :ui="{ background: 'bg-white dark:bg-white' }">
         <div class="flex flex-col items-center justify-center text-primary">
           <span class="text-xl text-gray-700">La Commuz' présente son spectacle 2024</span>
 
@@ -17,12 +17,12 @@
             BACKSTAGE
           </span>
 
-          <ULink to="/spectacle/2025" active-class="text-primary"
-            inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 mt-4">
-            <span class="flex flex-row items-center space-x-2"><span>En savoir plus </span>
+          <NuxtLink to="/spectacle/2025" class="text-gray-400 hover:text-gray-700 mt-4">
+            <span class="flex flex-row items-center space-x-2">
+              <span>En savoir plus </span>
               <UIcon name="i-heroicons-arrow-long-right-solid" />
             </span>
-          </ULink>
+          </NuxtLink>
         </div>
       </UCard>
 
@@ -88,7 +88,7 @@
 
       <!-- Témoignages -->
       <UCard
-        class="group py-10 flex flex-col items-center justify-center bg-gradient-to-tr from-commuz-900 to-commuz-500 border-none px-10">
+        class="bg-white group py-10 flex flex-col items-center justify-center bg-gradient-to-tr from-commuz-900 to-commuz-500 border-none px-10">
         <IndexQuote name="Frank Debouck &ndash; Directeur de l'École Centrale de Lyon entre 2011 et 2021"
           img-src="/images/homepage/debouck.jpg">
           J'ai pris hier soir un grand plaisir, le spectacle est de grande qualité, son, lumière, costumes magnifiques,
