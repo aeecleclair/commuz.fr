@@ -41,7 +41,7 @@
             étudiant&#183;e&#183;s de l'École Centrale de Lyon et de l'emlyon business school.
           </p>
           <p>
-            La Commuz’ réunit chaque année plus de 1 200 spectateurs lors de quatre soirées de représentations au mois
+            La Commuz’ réunit chaque année près de 2 000 spectateurs lors de quatre soirées de représentations au mois
             de
             mars.
           </p>
@@ -57,12 +57,11 @@
         ]">
           <p>
             De l'élaboration du scénario en passant par les chorégraphies, la composition et l'orchestration des
-            musiques,
-            la mise en place de l'éclairage et du son, la création des costumes et des décors…
+            musiques, la mise en place de l'éclairage et du son, la création des costumes et des décors…
           </p>
           <p>
-            Tous les corps de métier du théâtre, du chant et de la danse sont réunis pour créer ce spectacle qui se veut
-            d'une qualité professionnelle.
+            Tous les corps de métier du spectacle tels que le théâtre, le chant et la danse sont réunis pour créer nos
+            représentations qui se veulent d'une qualité professionnelle.
           </p>
         </HeroCarousel>
 
