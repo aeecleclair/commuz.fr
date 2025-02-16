@@ -39,20 +39,43 @@
 
                             <div class="absolute w-[20%] h-[43%] flex flex-col justify-center"
                                 style="right: 8.41%; bottom: 10%">
-                                <NuxtLink
+                                <button @click="isOpen = true"
                                     class="justify-center bg-[#da183b] p-2 rounded-lg text-white text-sm hover:bg-[#ec3154] text-center cursor-pointer">
                                     Réservez
                                     <br />
                                     votre billet !
-                                </NuxtLink>
+                                </button>
+
+                                <UModal v-model="isOpen">
+                                    <UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+                                        <div class="flex flex-col">
+
+                                            <div class="flex flex-row items-center gap-2 pb-2 text-[#da183b] text-3xl">
+                                                <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
+                                                Face au Mur
+                                            </div>
+
+                                            <span class="mb-2">Choisissez une représentation :</span>
+
+                                            <NuxtLink v-for="date in dates" :key="date.text" :to="date.link"
+                                                target="_blank"
+                                                class="flex flex-row items-center gap-1 pb-2 hover:text-[#da183b]">
+                                                <UIcon name="i-heroicons-arrow-long-right-20-solid" class="w-5 h-5" />
+                                                {{ date.text }}
+                                            </NuxtLink>
+                                        </div>
+                                    </UCard>
+                                </UModal>
+
                             </div>
+
 
 
                         </div>
 
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-center mb-4">La Grande Tombola Commuz'</div>
+                        <div class="text-3xl font-bold text-center mb-4">La Grande Tombola de la Commuz'</div>
 
                         <div class="flex flex-row justify-around items-center gap-8">
                             <span class="w-2/3 flex flex-col items-center gap-2">
@@ -138,10 +161,7 @@
                                 <div class="flex flex-row items-center gap-2 pb-2 text-[#da183b]">
                                     <UIcon name="i-heroicons-clock" class="w-5 h-5" />Début du spectacle
                                 </div>
-                                <span>Vendredi 14 mars - 19h</span>
-                                <span>Samedi 15 mars - 13h30</span>
-                                <span>Samedi 15 mars - 19h</span>
-                                <span>Dimanche 16 mars - 17h</span>
+                                <span v-for="date in dates" :key="date.text">{{ date.text }}</span>
 
                                 <span class="italic mt-4">Les portes et la buvette ouvrent 1h avant le début de
                                     spectacle</span>
@@ -160,6 +180,26 @@
 <script setup lang="ts">
 import 'add-to-calendar-button';
 
+const isOpen = ref(false)
+
+const dates = [
+    {
+        text: "Vendredi 14 mars - 19h",
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-vendredi-14"
+    },
+    {
+        text: "Samedi 15 mars - 13h30",
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-samedi-15-13h30"
+    },
+    {
+        text: "Samedi 15 mars - 19h",
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-samedi-15"
+    },
+    {
+        text: "Dimanche 16 mars - 17h",
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-dimanche-16"
+    }
+]
 
 const calendriers = [{
     startDate: "2025-03-14", endDate: "2025-03-14",
@@ -179,11 +219,6 @@ const calendriers = [{
     label: "Dimanche 16 mars - 15h",
 }]
 
-const text4 = ("<h2>La Grande Tombola Commuz'</h2>"
-    + "<p> À l'aide de ses partenaires, la Commuz' 2024 vous propose une tombola pour gagner de nombreux lots !</p>"
-    + "<p> Vous pouvez tenter de gagner des places de paintball, des places de cinémas, des goodies au thème de la Commuz' 2024, et bien d'autres encore... </p>"
-    + "<p> <U> Date du tirage: 13/03 <U> </p>" + "<p> <U> Prix du ticket: 2€ <U> </p>"
-    + "<center> <a target='_black' rel='noopener' href='https://collecte.io/commuz-2024-tombola-3825547/fr' class='inline-link'> Pour participer c'est ici ! </a> </center>")
 
 const rouge = "#660000"
 const rougeClair = "#da183b"
