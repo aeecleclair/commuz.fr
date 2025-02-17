@@ -124,9 +124,52 @@
                                     <UIcon name="i-heroicons-map-pin" class="w-5 h-5" />
                                     Adresse
                                 </div>
-                                <span>Salle Marivaux - Espace culturel L'Atrium</span>
-                                <span>35 Av. du 8 Mai 1945</span>
-                                <span>69160 Tassin-la-Demi-Lune</span>
+                                <UTooltip :popper="{ arrow: true, placement: 'top' }">
+                                    <template #text>
+                                        <div v-if="!contentCoppied" class="flex flex-row items-center gap-2 pb-2">
+                                            <UIcon name="i-heroicons-clipboard-document-check" class="w-5 h-5" />
+                                            Copier l'adresse
+                                        </div>
+                                        <div v-else class="flex flex-row items-center gap-2 pb-2">
+                                            <UIcon name="i-heroicons-check-circle" class="w-5 h-5" />
+                                            Adresse copiée
+                                        </div>
+                                    </template>
+                                    <button class="flex flex-col items-center"
+                                        @click="copyClipboard('Salle Marivaux - Espace culturel L\'Atrium, 35 Av. du 8 Mai 1945, 69160 Tassin-la-Demi-Lune')">
+                                        <span>Salle Marivaux - Espace culturel L'Atrium</span>
+                                        <span>35 Av. du 8 Mai 1945</span>
+                                        <span>69160 Tassin-la-Demi-Lune</span>
+                                    </button>
+                                </UTooltip>
+
+
+                                <span>Un parking sera à votre disposition</span>
+
+                                <span class="mt-2">Rejoignez-nous en transports en commun</span>
+                                <div class="flex flex-row gap-2">
+                                    <NuxtLink to="https://www.tcl.fr/lignes/bus-5" target="_blank">
+                                        <NuxtImg src="/bus/5.svg" alt="Bus 5" class="w-16" />
+                                    </NuxtLink>
+                                    <NuxtLink to="https://www.tcl.fr/lignes/bus-55" target="_blank">
+                                        <NuxtImg src="/bus/55.svg" alt="Bus 55" class="w-16" />
+                                    </NuxtLink>
+                                    <NuxtLink to="https://www.tcl.fr/lignes/bus-72" target="_blank">
+                                        <NuxtImg src="/bus/72.svg" alt="Bus 72" class="w-16" />
+                                    </NuxtLink>
+
+                                </div>
+
+                                <div class="flex flex-row gap-2 mt-1">
+
+                                    <NuxtLink to="https://www.tcl.fr/lignes/ligne-majeure-C21" target="_blank">
+                                        <NuxtImg src="/bus/C21.svg" alt="Bus C21" class="w-16" />
+                                    </NuxtLink>
+                                    <NuxtLink to="https://www.tcl.fr/lignes/ligne-majeure-C22" target="_blank">
+                                        <NuxtImg src="/bus/C22.svg" alt="Bus C22" class="w-16" />
+                                    </NuxtLink>
+
+                                </div>
                             </div>
 
 
@@ -164,9 +207,21 @@
                                     spectacle</span>
                             </div>
                         </div>
+                        <div class="text-center mt-8">
+                            N'attendez plus,
+                            <button @click="isOpen = true"
+                                class="inline-link justify-center text-[#da183b] hover:text-[#ec3154] text-center ">
+                                réservez votre billet
+                            </button>
+                            et venez découvrir la nouvelle création de la Commuz' !
+                        </div>
                     </div>
 
+
+
+
                 </div>
+
 
 
             </div>
@@ -178,6 +233,20 @@
 import 'add-to-calendar-button';
 
 const isOpen = ref(false)
+
+const contentCoppied = ref(false);
+async function copyClipboard(content: string) {
+    contentCoppied.value = true;
+    navigator.clipboard.writeText(content);
+    await delay(5000)
+    contentCoppied.value = false;
+}
+
+function delay(delay: number) {
+    return new Promise((r) => {
+        setTimeout(r, delay);
+    });
+}
 
 const dates = [
     {
