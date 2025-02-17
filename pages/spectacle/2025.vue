@@ -11,7 +11,7 @@
                         {{ daysString }}
                     </h3>
                 </div>
-                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">days</p>
+                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">jours</p>
             </div>
             <h3 class="font-manrope font-semibold text-2xl text-gray-900 text-white">:</h3>
             <div class="timer w-16">
@@ -20,7 +20,7 @@
                         {{ hoursString }}
                     </h3>
                 </div>
-                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">hours</p>
+                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">heures</p>
             </div>
             <h3 class="font-manrope font-semibold text-2xl text-gray-900 text-white">:</h3>
             <div class="timer w-16">
@@ -40,7 +40,7 @@
                         {{ secondsString }}
                     </h3>
                 </div>
-                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">seconds</p>
+                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">secondes</p>
             </div>
         </div>
 
