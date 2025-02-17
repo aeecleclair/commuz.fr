@@ -14,19 +14,16 @@
                             </div>
                             <div class="w-1/2">
                                 Berlin, 1989. Trois jours après la chute du Mur, tandis que la Stasi s’empresse
-                                d’effacer
-                                les traces de ses crimes, un père retrouve enfin sa famille à l’Est après cinq ans
-                                d’absence.
+                                d’effacer les traces de ses crimes, un père retrouve enfin sa famille à l’Est après cinq
+                                ans d’absence. Mais ces retrouvailles sont vite troublées par de lourds secrets.
                             </div>
                         </div>
 
                         <div class="flex flex-row justify-around items-center">
                             <div class="w-1/2">
-                                Mais ces retrouvailles sont vite troublées par de lourds secrets. A l’image de la
-                                société allemande, la famille Neumann est tiraillée entre l’espoir d’un futur meilleur
-                                incarné par le mouvement punk et la crainte de l’inconciliable / crainte de divisions
-                                inconciliables / irréparables. Comment se reconstruire quand le passé refuse de
-                                s’effacer ?
+                                À l’image de la société allemande, la famille Neumann est tiraillée entre l’espoir d’un
+                                futur meilleur et les divisions inconciliables. Comment se reconstruire quand le passé
+                                refuse de s’effacer ?
                             </div>
 
 
@@ -40,7 +37,7 @@
                             <div class="absolute w-[20%] h-[43%] flex flex-col justify-center"
                                 style="right: 8.41%; bottom: 10%">
                                 <button @click="isOpen = true"
-                                    class="justify-center bg-[#da183b] p-2 rounded-lg text-white text-sm hover:bg-[#ec3154] text-center cursor-pointer">
+                                    class="justify-center bg-[#da183b] p-2 rounded-lg text-white text-sm hover:bg-[#ec3154] text-center">
                                     Réservez
                                     <br />
                                     votre billet !
@@ -80,7 +77,7 @@
                         <div class="flex flex-row justify-around items-center gap-8">
                             <span class="w-2/3 flex flex-col items-center gap-2">
                                 <span>
-                                    À l'aide de ses partenaires, la Commuz' vous propose une tombola pour gagner de
+                                    Avec l'aide de ses partenaires, la Commuz' vous propose une tombola pour gagner de
                                     nombreux
                                     lots !
 
@@ -122,7 +119,7 @@
                             </div>
 
 
-                            <div class="flex flex-col items-center w-1/2">
+                            <div class="flex flex-col items-center gap-1 w-1/2">
                                 <div class="flex flex-row items-center gap-2 pb-2 text-[#da183b]">
                                     <UIcon name="i-heroicons-map-pin" class="w-5 h-5" />
                                     Adresse
@@ -216,7 +213,7 @@ const calendriers = [{
 }, {
     startDate: "2025-03-16", endDate: "2025-03-16",
     startTime: "17:00", endTime: "20:00", iCalFileName: "commuz-2025-face-au-mur-dimanche-16",
-    label: "Dimanche 16 mars - 15h",
+    label: "Dimanche 16 mars - 17h",
 }]
 
 
