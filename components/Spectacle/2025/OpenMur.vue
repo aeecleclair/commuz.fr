@@ -13,21 +13,21 @@
 
             <!-- 100vh-48px correspond to the height of the user screen minus the navbar which height is 48px -->
             <div class="wall right-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
-                :class="{ 'opacity-0 duration-1000': scrollPos > 0 }">
+                :class="{ 'opacity-0 duration-1000 pointer-events-none': scrollPos > 0 }">
                 <NuxtImg src="images/spectacle/2025/Back_light.png" class="h-full" />
             </div>
 
             <div class="wall left-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
-                :class="{ '-translate-x-full': scrollPos > 0 }">
+                :class="{ '-translate-x-full pointer-events-none': scrollPos > 0 }">
                 <NuxtImg src="images/spectacle/2025/Left.png" class="h-full" />
             </div>
             <div class="wall right-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
-                :class="{ 'translate-x-full': scrollPos > 0 }">
+                :class="{ 'translate-x-full pointer-events-none': scrollPos > 0 }">
                 <NuxtImg src="images/spectacle/2025/Right.png" class="h-full" />
             </div>
 
             <div class="wall right-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
-                :class="{ 'opacity-0 duration-1000': scrollPos > 0 }">
+                :class="{ 'opacity-0 duration-1000 pointer-events-none': scrollPos > 0 }">
                 <NuxtImg src="images/spectacle/2025/Front_light.png" class="h-full" />
             </div>
         </div>
