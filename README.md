@@ -60,6 +60,12 @@ In [layouts/default.vue](./components/NavBar.vue) you will be able to configure 
 
 - by settings `castingOpen` to true, the website will advertise its casting page. You should set this during the castings phases, but disable it the rest of the year, to prevent unnecessary informations. The majority of /castings pages should not be really relevant for people outside our schools
 
+### The revelation countdown
+
+Before publishing the presentation page of the new edition (`/spectacle/YEAR`), you can create a countdown page using the component [`RevelationCountdown`](./components/RevelationCountdown.vue)
+
+### Analytics
+
 ## Integrate a YouTube video
 
 You will need to integrate YouTube videos for the trailer. We use for this the incredible [NuxtScripts](https://scripts.nuxt.com/) tool.
