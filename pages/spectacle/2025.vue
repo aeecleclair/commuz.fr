@@ -112,29 +112,8 @@
                             <span>Un parking sera à votre disposition</span>
 
                             <span class="mt-2">Rejoignez-nous en transports en commun</span>
-                            <div class="flex flex-row gap-2">
-                                <NuxtLink to="https://www.tcl.fr/lignes/bus-5" target="_blank">
-                                    <NuxtImg src="/bus/5.svg" alt="Bus 5" class="w-16" />
-                                </NuxtLink>
-                                <NuxtLink to="https://www.tcl.fr/lignes/bus-55" target="_blank">
-                                    <NuxtImg src="/bus/55.svg" alt="Bus 55" class="w-16" />
-                                </NuxtLink>
-                                <NuxtLink to="https://www.tcl.fr/lignes/bus-72" target="_blank">
-                                    <NuxtImg src="/bus/72.svg" alt="Bus 72" class="w-16" />
-                                </NuxtLink>
-
-                            </div>
-
-                            <div class="flex flex-row gap-2 mt-1">
-
-                                <NuxtLink to="https://www.tcl.fr/lignes/ligne-majeure-C21" target="_blank">
-                                    <NuxtImg src="/bus/C21.svg" alt="Bus C21" class="w-16" />
-                                </NuxtLink>
-                                <NuxtLink to="https://www.tcl.fr/lignes/ligne-majeure-C22" target="_blank">
-                                    <NuxtImg src="/bus/C22.svg" alt="Bus C22" class="w-16" />
-                                </NuxtLink>
-
-                            </div>
+                            <BusList :buses="['5', '55', '72']" />
+                            <BusList :buses="['C21', 'C22']" class="mt-1" />
                         </div>
 
 
@@ -182,11 +161,14 @@
                 </div>
 
                 <!-- Modal to buy a ticket -->
-                <UModal v-model="isBuyATicketOpen">
+                <!-- As Leaflet use z-index as big as 900 (https://leafletjs.com/reference.html#map-pane)
+                  we need to increase the z-index of the `UModal` (50 by default) to ensure it will be on top of the map 
+                  We choosed `z-[1000]` -->
+                <UModal v-model="isBuyATicketOpen" :ui="{ wrapper: 'z-[1000]' }">
                     <UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
                         <div class="flex flex-col">
 
-                            <div class="flex flex-row items-center gap-2 pb-2 text-[#da183b] text-3xl">
+                            <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
                                 <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
                                 Face au Mur
                             </div>
@@ -194,7 +176,7 @@
                             <span class="mb-2">Choisissez une représentation :</span>
 
                             <NuxtLink v-for="date in dates" :key="date.text" :to="date.link" target="_blank"
-                                class="flex flex-row items-center gap-1 pb-2 hover:text-[#da183b]">
+                                class="flex flex-row items-center gap-1 pb-2 hover:text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-arrow-long-right-20-solid" class="w-5 h-5" />
                                 {{ date.text }}
                             </NuxtLink>
