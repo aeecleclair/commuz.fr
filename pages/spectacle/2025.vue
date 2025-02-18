@@ -7,13 +7,13 @@
                 <div class="flex flex-col gap-20 items-center">
                     <div class="text-5xl font-bold text-center">La Commuz' 2025 présente</div>
                     <div class="flex flex-row justify-around items-center">
-                        <div class="flex flex-col items-center">
-                            <NuxtImg src="images/spectacle/2025/FaceAuMur.png" alt="Face au mur" class="h-64" />
-                        </div>
+                        <NuxtImg src="images/spectacle/2025/FaceAuMur.png" alt="Face au Mur" class="h-64" />
                         <div class="w-1/2">
-                            Berlin, 1989. Trois jours après la chute du Mur, tandis que la Stasi s’empresse
-                            d’effacer les traces de ses crimes, un père retrouve enfin sa famille à l’Est après cinq
-                            ans d’absence. Mais ces retrouvailles sont vite troublées par de lourds secrets.
+                            <span class="text-[var(--redLight2025)]">Berlin, 1989</span>. Trois jours après la chute du
+                            Mur, tandis que la Stasi s’empresse
+                            d’effacer
+                            les traces de ses crimes, un père retrouve enfin sa famille à l’Est après cinq ans
+                            d’absence. Mais ces retrouvailles sont vite troublées par de lourds secrets.
                         </div>
                     </div>
                     <div class="flex flex-row justify-around items-center">
@@ -27,11 +27,12 @@
 
                     <!-- Buy a ticket -->
                     <div class="relative">
+                        <!-- We use absolute positioning to place the button at the right place on the ticket image -->
                         <NuxtImg src="images/spectacle/2025/billet.png" />
                         <div class="absolute w-[20%] h-[43%] flex flex-col justify-center"
                             style="right: 8.41%; bottom: 10%">
                             <button @click="isBuyATicketOpen = true"
-                                class="justify-center bg-[#da183b] p-2 rounded-lg text-white text-sm hover:bg-[#ec3154] text-center">
+                                class="justify-center bg-[var(--redLight2025)] p-2 rounded-lg text-white text-sm hover:bg-[var(--redUltraLight)] text-center">
                                 Réservez
                                 <br />
                                 votre billet !
@@ -84,7 +85,7 @@
 
 
                         <div class="flex flex-col items-center gap-1 w-1/2">
-                            <div class="flex flex-row items-center gap-2 pb-2 text-[#da183b]">
+                            <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-map-pin" class="w-5 h-5" />
                                 Adresse
                             </div>
@@ -146,7 +147,7 @@
 
                     <div class="flex flex-row justify-around items-center mt-5">
                         <div class="flex flex-col items-center w-1/2">
-                            <div class="flex flex-row items-center gap-2 pb-2 text-[#da183b]">
+                            <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-calendar-date-range" class="w-5 h-5" />Ajouter au
                                 calendrier
                             </div>
@@ -161,7 +162,7 @@
                         </div>
 
                         <div class="flex flex-col items-center w-1/2">
-                            <div class="flex flex-row items-center gap-2 pb-2 text-[#da183b]">
+                            <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-clock" class="w-5 h-5" />Début du spectacle
                             </div>
                             <span v-for="date in dates" :key="date.text">{{ date.text }}</span>
@@ -173,7 +174,7 @@
                     <div class="text-center mt-8">
                         N'attendez plus,
                         <button @click="isBuyATicketOpen = true"
-                            class="inline-link justify-center text-[#da183b] hover:text-[#ec3154] text-center ">
+                            class="inline-link justify-center text-[var(--redLight2025)] hover:text-[var(--redUltraLight)] text-center ">
                             réservez votre billet
                         </button>
                         et venez découvrir la nouvelle création de la Commuz' !
@@ -266,10 +267,16 @@ const calendriers = [{
     label: "Dimanche 16 mars - 17h",
 }]
 
-
-const rouge = "#660000"
-const rougeClair = "#da183b"
-const bleu = "#003b94"
-const bleuClair = "#51e0ff"
-
 </script>
+
+<style>
+:root {
+    --red2025: #660000;
+    --redLight2025: #da183b;
+    /* redUltraLight us used as an accent color for hovered elements */
+    --redUltraLight: #ec3154;
+
+    --blue2025: #003b94;
+    --blueLight2025: #51e0ff;
+}
+</style>
