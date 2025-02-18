@@ -22,7 +22,7 @@
                             futur meilleur et des fractures qui semblent irréparables. Entre trahisons familiales et
                             secrets d’État, comment se reconstruire quand le passé refuse de s’effacer ?
                         </div>
-                        <YouTubeVideo video-id="dC33k5Ed_Ek" class="w-1/3" />
+                        <YouTubeVideo video-id="u3cpudx94HI" class="w-1/3" />
                     </div>
 
                     <!-- Buy a ticket -->
@@ -89,27 +89,16 @@
                                 <UIcon name="i-heroicons-map-pin" class="w-5 h-5" />
                                 Adresse
                             </div>
-                            <UTooltip :popper="{ arrow: true, placement: 'top' }">
-                                <template #text>
-                                    <div v-if="!contentCoppied" class="flex flex-row items-center gap-2 pb-2">
-                                        <UIcon name="i-heroicons-clipboard-document-check" class="w-5 h-5" />
-                                        Copier l'adresse
-                                    </div>
-                                    <div v-else class="flex flex-row items-center gap-2 pb-2">
-                                        <UIcon name="i-heroicons-check-circle" class="w-5 h-5" />
-                                        Adresse copiée
-                                    </div>
-                                </template>
-                                <button class="flex flex-col items-center"
-                                    @click="copyClipboard('Salle Marivaux - Espace culturel L\'Atrium, 35 Av. du 8 Mai 1945, 69160 Tassin-la-Demi-Lune')">
+                            <CopyAddressToClipboard
+                                content="Salle Marivaux - Espace culturel L'Atrium, 35 Av. du 8 Mai 1945, 69160 Tassin-la-Demi-Lune">
+                                <div class="flex flex-col items-center">
                                     <span>Salle Marivaux - Espace culturel L'Atrium</span>
                                     <span>35 Av. du 8 Mai 1945</span>
                                     <span>69160 Tassin-la-Demi-Lune</span>
-                                </button>
-                            </UTooltip>
+                                </div>
+                            </CopyAddressToClipboard>
 
-
-                            <span>Un parking sera à votre disposition</span>
+                            <span class="italic">Des parkings public et privé seront mis à votre disposition</span>
 
                             <span class="mt-2">Rejoignez-nous en transports en commun</span>
                             <BusList :buses="['5', '55', '72']" />
@@ -198,36 +187,22 @@ import 'add-to-calendar-button';
 
 const isBuyATicketOpen = ref(false)
 
-const contentCoppied = ref(false);
-async function copyClipboard(content: string) {
-    contentCoppied.value = true;
-    navigator.clipboard.writeText(content);
-    await delay(5000)
-    contentCoppied.value = false;
-}
-
-function delay(delay: number) {
-    return new Promise((r) => {
-        setTimeout(r, delay);
-    });
-}
-
 const dates = [
     {
         text: "Vendredi 14 mars - 19h",
-        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-vendredi-14"
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-vendredi"
     },
     {
         text: "Samedi 15 mars - 13h30",
-        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-samedi-15-13h30"
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-samedi-apres-midi"
     },
     {
         text: "Samedi 15 mars - 19h",
-        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-samedi-15"
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-samedi-soir"
     },
     {
         text: "Dimanche 16 mars - 17h",
-        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-dimanche-16"
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-dimanche"
     }
 ]
 
