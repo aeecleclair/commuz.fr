@@ -1,14 +1,14 @@
 <template>
     <div class="min-h-screen">
         <Spectacle2025OpenMur class="min-h-screen pb-10">
-            <div class="py-5 px-40 flex flex-col gap-40">
+            <div class="py-5 px-10 md:px-40 flex flex-col gap-10 md:gap-40">
 
                 <!-- Synopsis of the spectacle, and trailer -->
-                <div class="flex flex-col gap-20 items-center">
+                <div class="flex flex-col gap-10 md:gap-20 items-center">
                     <div class="text-5xl font-bold text-center">La Commuz' 2025 présente</div>
-                    <div class="flex flex-row justify-around items-center">
+                    <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-around items-center">
                         <NuxtImg src="images/spectacle/2025/FaceAuMur.png" alt="Face au Mur" class="h-64" />
-                        <div class="w-1/2">
+                        <div class="md:w-1/2">
                             <span class="text-[var(--redLight2025)]">Berlin, 1989</span>. Trois jours après la chute du
                             Mur, tandis que la Stasi s’empresse
                             d’effacer
@@ -16,13 +16,13 @@
                             d’absence. Mais ces retrouvailles sont vite troublées par de lourds secrets.
                         </div>
                     </div>
-                    <div class="flex flex-row justify-around items-center">
-                        <div class="w-1/2">
+                    <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-around items-center">
+                        <div class="md:w-1/2">
                             À l’image de la société allemande, la famille Neumann est tiraillée entre l’espoir d’un
                             futur meilleur et des fractures qui semblent irréparables. Entre trahisons familiales et
                             secrets d’État, comment se reconstruire quand le passé refuse de s’effacer ?
                         </div>
-                        <YouTubeVideo video-id="u3cpudx94HI" class="w-1/3" />
+                        <YouTubeVideo video-id="u3cpudx94HI" class="md:w-1/3" />
                     </div>
 
                     <!-- Buy a ticket -->
@@ -45,8 +45,8 @@
                 <div>
                     <div class="text-3xl font-bold text-center mb-4">La Grande Tombola de la Commuz'</div>
 
-                    <div class="flex flex-row justify-around items-center gap-8">
-                        <span class="w-2/3 flex flex-col items-center gap-2">
+                    <div class="flex flex-col-reverse md:flex-row justify-around items-center gap-8">
+                        <span class="md:w-2/3 flex flex-col items-center gap-2">
                             <span>
                                 Avec l'aide de ses partenaires, la Commuz' vous propose une tombola pour gagner de
                                 nombreux
@@ -66,25 +66,24 @@
                                 class="inline-link">Achetez vos tickets !</NuxtLink>
                         </span>
 
-                        <NuxtImg src="images/spectacle/2025/Tombola.png" alt="Tombola" class="w-1/3" />
+                        <NuxtImg src="images/spectacle/2025/Tombola.png" alt="Tombola" class="md:w-1/3" />
                     </div>
                 </div>
 
                 <!-- Practical informations -->
                 <div>
-                    <div class="text-3xl font-bold text-center">Informations pratiques</div>
+                    <div class="text-3xl font-bold text-center mb-5">Informations pratiques</div>
 
-                    <div class="flex flex-row justify-around items-center gap-8">
+                    <div class="flex flex-col md:flex-row justify-around items-center gap-8">
 
-
-                        <div class="flex flex-col items-center w-1/2">
+                        <div class="flex flex-col items-center md:w-1/2">
                             <div class="w-48 h-48">
                                 <LeafletMap :lat="45.759958" :lng="4.7711689" :zoom="15" />
                             </div>
                         </div>
 
 
-                        <div class="flex flex-col items-center gap-1 w-1/2">
+                        <div class="flex flex-col items-center gap-1 md:w-1/2">
                             <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-map-pin" class="w-5 h-5" />
                                 Adresse
@@ -98,23 +97,17 @@
                                 </div>
                             </CopyAddressToClipboard>
 
-                            <span class="italic">Des parkings public et privé seront mis à votre disposition</span>
+                            <span class="italic text-center">Des parkings public et privé seront mis à votre
+                                disposition</span>
 
                             <span class="mt-2">Rejoignez-nous en transports en commun</span>
                             <BusList :buses="['5', '55', '72']" />
                             <BusList :buses="['C21', 'C22']" class="mt-1" />
                         </div>
-
-
-
-
-
                     </div>
 
-
-
-                    <div class="flex flex-row justify-around items-center mt-5">
-                        <div class="flex flex-col items-center w-1/2">
+                    <div class="flex flex-col-reverse md:flex-row justify-around items-center mt-5">
+                        <div class="flex flex-col items-center md:w-1/2 mt-5 md:mt-0">
                             <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-calendar-date-range" class="w-5 h-5" />Ajouter au
                                 calendrier
@@ -129,13 +122,14 @@
                                 hideIconButton="true" size="2|2|2" lightMode="dark" language="fr" hideBranding="true" />
                         </div>
 
-                        <div class="flex flex-col items-center w-1/2">
+                        <div class="flex flex-col items-center md:w-1/2">
                             <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-clock" class="w-5 h-5" />Début du spectacle
                             </div>
                             <span v-for="date in dates" :key="date.text">{{ date.text }}</span>
 
-                            <span class="italic mt-4">Les portes et la buvette ouvrent 1h avant le début de
+                            <span class="italic mt-4 text-center">Les portes et la buvette ouvrent 1 heure avant le
+                                début de
                                 spectacle</span>
                         </div>
                     </div>
