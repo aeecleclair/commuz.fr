@@ -58,6 +58,14 @@ Change the file `public/videos/video-intro.webm`
 > If the quality of the video is bad, it is possible to reduce the 40 (ex: 10 is pretty high quality) but don't forget the video will be in background, bellow the logo, at the top of the page
 > Less than 8 Mo seems like a good compromise for me
 
+## Size of the website
+
+Our site is really big, it is really important to optimize it when possible
+
+### Reduce images size
+
+For PNG you can use: https://tinypng.com/
+
 ## Configure the website status
 
 In [layouts/default.vue](./components/NavBar.vue) you will be able to configure global variables.
