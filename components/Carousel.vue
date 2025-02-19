@@ -1,6 +1,6 @@
 <template>
   <UCarousel v-slot="{ item }" :items="images" :ui="{ item: 'basis-full' }" class="rounded-lg overflow-hidden" arrows>
-    <NuxtImg class="w-full" draggable="false" :src="item"/>
+    <NuxtImg class="w-full" draggable="false" :src="item" loading="lazy"/>
 
     <!-- We add these two icons, to force import them and allow UCarousel to show them -->
     <UIcon name="i-heroicons-chevron-left-20-solid" class="hidden" />

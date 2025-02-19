@@ -49,16 +49,42 @@ Use the script [image_manipulation.ts](./image_manipulation.ts) to export images
 You should keep the same format for the video, which is light and made for the web. You can use the following command to convert a video to the right format :
 
 ```bash
-ffmpeg -i input_file.mp4 -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis public/videos/video-intro.webm
+ffmpeg -i input_file.mp4 -c:v libvpx -crf 40 -b:v 300k -an -vf "scale=1280:720" public/videos/video-intro.webm
 ```
 
 Change the file `public/videos/video-intro.webm`
 
+> WARNING: this video will be loaded on each access to our website. It must be as light as possible.
+> If the quality of the video is bad, it is possible to reduce the 40 (ex: 10 is pretty high quality) but don't forget the video will be in background, bellow the logo, at the top of the page
+> Less than 8 Mo seems like a good compromise for me
+
 ## Configure the website status
 
-In [layouts/default.vue](./layouts/default.vue) you will be able to configure global variables.
+In [layouts/default.vue](./components/NavBar.vue) you will be able to configure global variables.
 
 - by settings `castingOpen` to true, the website will advertise its casting page. You should set this during the castings phases, but disable it the rest of the year, to prevent unnecessary informations. The majority of /castings pages should not be really relevant for people outside our schools
+
+### The revelation countdown
+
+Before publishing the presentation page of the new edition (`/spectacle/YEAR`), you can create a countdown page using the component [`RevelationCountdown`](./components/RevelationCountdown.vue)
+
+### Analytics
+
+## Integrate a YouTube video
+
+You will need to integrate YouTube videos for the trailer. We use for this the incredible [NuxtScripts](https://scripts.nuxt.com/) tool.
+
+To easily integrate a YouTube video, there is a component which import the player, add the thumbnail and a Youtube icon:
+
+```html
+<YoutubeVideo class="h-96" videoId="0in9oBqaI0I" />
+```
+
+don't forger to fix its size (for example `h-96`)
+
+## Fonts
+
+If you need to import fonts, I suggest to use fonts.bunny.net which is more privacy friendly than Google Font
 
 # TODO :
 

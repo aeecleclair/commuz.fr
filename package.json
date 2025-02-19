@@ -18,6 +18,8 @@
     "@nuxt/image": "^1.7.0",
     "@nuxt/scripts": "^0.10.1",
     "@nuxt/ui": "^2.18.4",
+    "@nuxtjs/leaflet": "^1.2.6",
+    "@types/youtube": "^0.1.0",
     "@unhead/vue": "^1.11.18",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -32,10 +34,9 @@
     "vue-router": "^4.4.3"
   },
   "dependencies": {
+    "add-to-calendar-button": "^2.8.1",
     "animejs": "^3.2.2",
-    "vue-carousel-3d": "^1.0.1",
     "vue-easy-lightbox": "^1.19.0",
-    "vue3-carousel-nuxt": "^1.1.2",
     "vuedraggable": "^4.1.0"
   }
 }

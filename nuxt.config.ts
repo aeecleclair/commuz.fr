@@ -1,13 +1,13 @@
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
 
   modules: [
     "nuxt-gtag",
-    "vue3-carousel-nuxt",
     "@nuxt/image",
     "@nuxt/eslint",
     "@nuxt/ui",
     "@nuxt/scripts",
+    "@nuxtjs/leaflet",
   ],
 
   image: {
@@ -20,9 +20,15 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/global.scss"],
 
+  colorMode: {
+    preference: "dark",
+  },
+
   vue: {
     compilerOptions: {
-      isCustomElement: (tag) => ["Nuxt"].includes(tag),
+      // tag.startsWith('add-') is used for https://add-to-calendar-button.com/
+      isCustomElement: (tag) =>
+        ["Nuxt"].includes(tag) || tag.startsWith("add-"),
     },
   },
 
@@ -76,17 +82,11 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: "https://commuz.fr/logos/commuz-masque-logo.png",
+          content: "https://commuz.fr/logos/Commuz__blanc.svg",
         },
         { name: "twitter:image:alt", content: "Logo de la Commuz'" },
       ],
     },
-  },
-
-  // TODO remove with vue3-carousel
-  // See https://github.com/ismail9k/vue3-carousel/issues/377
-  alias: {
-    "vue3-carousel/dist/carousel": "vue3-carousel/dist/carousel.es.js",
   },
 
   compatibilityDate: "2024-09-15",
