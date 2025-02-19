@@ -29,12 +29,9 @@
       <div class="flex flex-col gap-20">
 
         <HeroCarousel title=" La Commuz', c'est quoi ?" :images="[
-          '/AaZ/IMG_1547.jpg',
-          '/AaZ/IMG_2246.jpg',
-          '/AaZ/IMG_5434.jpg',
-          '/AaZ/IMG_5917.jpg',
-          '/AaZ/IMG_6097.jpg',
-          '/AaZ/IMG_6154.jpg',
+          '/images/homepage/Carousel/Commuz/1.jpg',
+          '/images/homepage/Carousel/Commuz/2.jpg',
+          '/images/homepage/Carousel/Commuz/3.jpg',
         ]">
           <p>
             La Commuz' est une comédie musicale organisée chaque année depuis 20 ans par une équipe de près de 100
@@ -48,12 +45,9 @@
         </HeroCarousel>
 
         <HeroCarousel title="Un spectacle imaginé de A à Z" :reversed="true" :images="[
-          '/AaZ/IMG_1547.jpg',
-          '/AaZ/IMG_2246.jpg',
-          '/AaZ/IMG_5434.jpg',
-          '/AaZ/IMG_5917.jpg',
-          '/AaZ/IMG_6097.jpg',
-          '/AaZ/IMG_6154.jpg',
+          '/images/homepage/Carousel/AaZ/1.jpg',
+          '/images/homepage/Carousel/AaZ/2.jpg',
+          '/images/homepage/Carousel/AaZ/3.jpg',
         ]">
           <p>
             De l'élaboration du scénario en passant par les chorégraphies, la composition et l'orchestration des
@@ -66,12 +60,10 @@
         </HeroCarousel>
 
         <HeroCarousel title="Deux écoles, un projet commun" :images="[
-          '/AaZ/IMG_1547.jpg',
-          '/AaZ/IMG_2246.jpg',
-          '/AaZ/IMG_5434.jpg',
-          '/AaZ/IMG_5917.jpg',
-          '/AaZ/IMG_6097.jpg',
-          '/AaZ/IMG_6154.jpg',
+          '/images/homepage/Carousel/Schools/1.jpg',
+          '/images/homepage/Carousel/Schools/2.jpg',
+          '/images/homepage/Carousel/Schools/3.jpg',
+          '/images/homepage/Carousel/Schools/4.jpg',
         ]">
           <p>
             100 élèves aux talents variés issus de l'emlyon business school et de l'École Centrale de Lyon travaillent
