@@ -135,6 +135,10 @@ const dates = [
     {
         text: "Dimanche 16 mars - 17h",
         link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-dimanche"
+    },
+    {
+        text: "Billetterie Commuz' et Mun'Light",
+        link: "https://www.helloasso.com/associations/aeecl/evenements/commuz-2025-diplo"
     }
 ]
 </script>
