@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <img id="footer__logo" src="/logos/commuz-masque-logo-gris.png" alt="Logo Commuz' Noir">
+    <NuxtImg id="footer__logo" src="/logos/Commuz_blanc.svg" alt="Logo Commuz'" />
     <div id="social">
       <ul>
         <li><a class="inline-link" target="_blank" rel="noopener"

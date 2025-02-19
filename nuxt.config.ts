@@ -82,7 +82,7 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: "https://commuz.fr/logos/commuz-masque-logo.png",
+          content: "https://commuz.fr/logos/Commuz__blanc.svg",
         },
         { name: "twitter:image:alt", content: "Logo de la Commuz'" },
       ],
