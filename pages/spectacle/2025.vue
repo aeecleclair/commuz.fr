@@ -76,13 +76,6 @@
 
                     <div class="flex flex-col md:flex-row justify-around items-center gap-8">
 
-                        <div class="flex flex-col items-center md:w-1/2">
-                            <div class="w-48 h-48">
-                                <LeafletMap :lat="45.759958" :lng="4.7711689" :zoom="15" />
-                            </div>
-                        </div>
-
-
                         <div class="flex flex-col items-center gap-1 md:w-1/2">
                             <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
                                 <UIcon name="i-heroicons-map-pin" class="w-5 h-5" />
@@ -99,8 +92,17 @@
 
                             <span class="italic text-center">Des parkings public et privé seront mis à votre
                                 disposition</span>
+                        </div>
 
-                            <span class="mt-2">Rejoignez-nous en transports en commun</span>
+
+                        <div class="flex flex-col items-center gap-1 md:w-1/2">
+                            <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)]">
+                                <UIcon name="i-heroicons-map-pin" class="w-5 h-5" />
+                                Transports en commun
+                            </div>
+
+                            <span class="my-2 italic w-1/2 text-center">La salle a la chance d'être desservie
+                                par de nombreux transports en commun</span>
                             <BusList :buses="['5', '55', '72']" />
                             <BusList :buses="['C21', 'C22']" class="mt-1" />
                         </div>
@@ -143,11 +145,7 @@
                     </div>
                 </div>
 
-                <!-- Modal to buy a ticket -->
-                <!-- As Leaflet use z-index as big as 900 (https://leafletjs.com/reference.html#map-pane)
-                  we need to increase the z-index of the `UModal` (50 by default) to ensure it will be on top of the map 
-                  We choosed `z-[1000]` -->
-                <UModal v-model="isBuyATicketOpen" :ui="{ wrapper: 'z-[1000]' }">
+                <UModal v-model="isBuyATicketOpen">
                     <UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
                         <div class="flex flex-col">
 
