@@ -84,8 +84,9 @@
                     </div>
                 </div>
 
-                <UModal v-model="isBuyATicketOpen" :ui="{ background: 'bg-gray-900 dark:bg-gray-900' }">
-                    <UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+                <UModal v-model="isBuyATicketOpen">
+                    <UCard
+                        :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800', background: 'bg-gray-900 dark:bg-gray-900' }">
                         <div class="flex flex-col">
 
                             <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
