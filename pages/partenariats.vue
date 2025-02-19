@@ -4,49 +4,31 @@
     <Meta name="description" content="Venez soutenir la Commuz en devenant partenaire." />
     <div>
       <div id="plaquette">
-        <p>Téléchargez notre <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf"
-            download>plaquette
-            partenariats</a>,
-          ou
-          contactez
-          notre responsable partenariat Gwladys à l'adresse <a
-            href="mailto:partenariat@commuz.fr">partenariat@commuz.fr</a></p>
+        <p>
+          Téléchargez notre
+          <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf" download>
+            plaquette partenariats
+          </a>,
+          ou contactez notre responsable partenariat Gwladys à l'adresse
+          <a href="mailto:partenariat@commuz.fr">
+            partenariat@commuz.fr
+          </a>
+        </p>
       </div>
 
-      <div>
-        <div v-if="Object.keys(respoPartenariats).length > 1">
-          <carousel :itemstoshow="2.5" :wrap-around="true" :autoplay="2000" :pause-autoplay-on-hover="true">
-            <slide v-for="partenaire in respoPartenariats" :key="partenaire.telephone" class="slide">
-              <div class="carousel-item">
-                <figure><img class="photos" :src="partenaire.image"></figure>
-                <p class="nom-prenom">{{ partenaire.prenom + ' ' + partenaire.nom }}</p>
-                <p class="telephone">{{ partenaire.telephone }}</p>
-              </div>
-            </slide>
-
-
-          </carousel>
+      <div class="flex flex-col md:flex-row justify-center">
+        <div v-for="partenaire in respoPartenariats" :key="partenaire.nom" class="flex flex-col items-center">
+          <NuxtImg class="h-28 rounded-full pb-2" :src="partenaire.image" />
+          <span class="">{{ partenaire.prenom + ' ' + partenaire.nom }}</span>
+          <span class="">{{ partenaire.telephone }}</span>
         </div>
-        <div v-else>
-          <carousel>
-            <slide v-for="partenaire in respoPartenariats" :key="partenaire.telephone" class="slide">
-              <div class="carousel-item">
-                <figure><img class="photos" :src="partenaire.image"></figure>
-                <p class="nom-prenom">{{ partenaire.prenom + ' ' + partenaire.nom }}</p>
-                <p class="telephone">{{ partenaire.telephone }}</p>
-              </div>
-            </slide>
-          </carousel>
-        </div>
-
       </div>
 
-      <div class="m-8 flex flex-col items-center">
+      <div class=" m-8 flex flex-col items-center">
         <h2>Les coulisses de la Commuz' 2023</h2>
 
         <YouTubeVideo class="md:h-96" videoId="0in9oBqaI0I" />
       </div>
-
 
       <sponsors />
     </div>
@@ -91,52 +73,6 @@ export default defineComponent({
 
   a {
     color: #ee8c04;
-  }
-}
-
-@media (min-width: 768px) {
-
-  .photos {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-
-  .nom-prenom {
-    font-size: 1.5rem;
-  }
-
-  .telephone {
-    font-size: 1.2rem;
-  }
-
-  .youtube {
-    width: 800px;
-    height: 450px;
-  }
-}
-
-@media (max-width: 767px) {
-
-  .photos {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-
-  .nom-prenom {
-    font-size: 1.5rem;
-  }
-
-  .telephone {
-    font-size: 1.2rem;
-  }
-
-  .youtube {
-    width: 300px;
-    height: 200px;
   }
 }
 </style>

@@ -34,8 +34,6 @@
 
 <script>
 
-import 'vue3-carousel/dist/carousel.css'
-
 const data = {
     text1:
         "<h2>Synopsis</h2>" +

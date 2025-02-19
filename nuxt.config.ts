@@ -1,9 +1,8 @@
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
 
   modules: [
     "nuxt-gtag",
-    "vue3-carousel-nuxt",
     "@nuxt/image",
     "@nuxt/eslint",
     "@nuxt/ui",
@@ -88,12 +87,6 @@ export default defineNuxtConfig({
         { name: "twitter:image:alt", content: "Logo de la Commuz'" },
       ],
     },
-  },
-
-  // TODO remove with vue3-carousel
-  // See https://github.com/ismail9k/vue3-carousel/issues/377
-  alias: {
-    "vue3-carousel/dist/carousel": "vue3-carousel/dist/carousel.es.js",
   },
 
   compatibilityDate: "2024-09-15",
