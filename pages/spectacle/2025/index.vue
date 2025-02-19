@@ -84,7 +84,7 @@
                     </div>
                 </div>
 
-                <UModal v-model="isBuyATicketOpen">
+                <UModal v-model="isBuyATicketOpen" :ui="{ background: 'bg-gray-900 dark:bg-gray-900' }">
                     <UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
                         <div class="flex flex-col">
 
