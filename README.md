@@ -49,10 +49,14 @@ Use the script [image_manipulation.ts](./image_manipulation.ts) to export images
 You should keep the same format for the video, which is light and made for the web. You can use the following command to convert a video to the right format :
 
 ```bash
-ffmpeg -i input_file.mp4 -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis public/videos/video-intro.webm
+ffmpeg -i input_file.mp4 -c:v libvpx -crf 40 -b:v 300k -an -vf "scale=1280:720" public/videos/video-intro.webm
 ```
 
 Change the file `public/videos/video-intro.webm`
+
+> WARNING: this video will be loaded on each access to our website. It must be as light as possible.
+> If the quality of the video is bad, it is possible to reduce the 40 (ex: 10 is pretty high quality) but don't forget the video will be in background, bellow the logo, at the top of the page
+> Less than 8 Mo seems like a good compromise for me
 
 ## Configure the website status
 
