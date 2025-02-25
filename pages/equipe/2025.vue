@@ -408,7 +408,7 @@ const equipe = {
             {
                 role: 'Danseuse',
                 nom: 'Cecilia TEKNETZIAN',
-                photo: 'Danse - Cécilia.jpg'
+                photo: 'Danse - Cecilia.jpg'
             },
             {
                 role: 'Danseuse',
