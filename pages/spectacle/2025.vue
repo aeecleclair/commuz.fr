@@ -29,7 +29,7 @@
                     <div class="relative">
                         <!-- We use absolute positioning to place the button at the right place on the ticket image -->
                         <NuxtImg src="images/spectacle/2025/billet.png" />
-                        <div class="absolute w-[20%] h-[43%] flex flex-col justify-center"
+                        <div class="absolute w-[20%] h-[43%] justify-center hidden md:flex flex-col"
                             style="right: 8.41%; bottom: 10%">
                             <button @click="isBuyATicketOpen = true"
                                 class="justify-center bg-[var(--redLight2025)] p-2 rounded-lg text-white text-sm hover:bg-[var(--redUltraLight)] text-center">
@@ -39,6 +39,12 @@
                             </button>
                         </div>
                     </div>
+
+                    <button @click="isBuyATicketOpen = true"
+                        class="md:hidden justify-center bg-[var(--redLight2025)] py-2 px-4 rounded-lg text-white text-sm hover:bg-[var(--redUltraLight)] text-center">
+                        Réservez votre billet !
+                    </button>
+
                 </div>
 
                 <!-- Tombola -->
