@@ -129,17 +129,17 @@ const equipe = {
             {
                 role: 'Scénariste',
                 nom: 'Coline LANJARD',
-                photo: 'Scénariste - Coline.jpg'
+                photo: 'Scenariste - Coline.jpg'
             },
             {
                 role: 'Scénariste',
                 nom: 'Alix LAROCHE',
-                photo: 'Scénariste - Alix.jpg'
+                photo: 'Scenariste - Alix.jpg'
             },
             {
                 role: 'Scénariste',
                 nom: 'Marie VOILAND',
-                photo: 'Scénariste - Marie.jpg'
+                photo: 'Scenariste - Marie.jpg'
             },
             {
                 role: 'Scénariste',
@@ -170,7 +170,7 @@ const equipe = {
             {
                 role: 'Metteur en scène',
                 nom: 'Côme LAROCHE',
-                photo: 'DA - Côme.jpg'
+                photo: 'DA - Come.jpg'
             }
         ]
     },
@@ -181,7 +181,7 @@ const equipe = {
             {
                 role: 'Acteur-chanteur',
                 nom: 'Clément RONDEPIERRE',
-                photo: 'AC - Clément.jpg'
+                photo: 'AC - Clement.jpg'
             },
             {
                 role: 'Actrice-chanteuse',
@@ -279,7 +279,7 @@ const equipe = {
             {
                 role: 'Compositeur',
                 nom: 'François DE MONTS',
-                photo: 'Compo - François.jpg'
+                photo: 'Compo - Francois.jpg'
             },
             {
                 role: 'Compositeur',
@@ -311,7 +311,7 @@ const equipe = {
             {
                 role: 'Batterie',
                 nom: 'Théo MERANGER',
-                photo: 'Zikos - Théo.jpg'
+                photo: 'Zikos - Theo.jpg'
             },
             {
                 role: 'Guitare',
@@ -321,7 +321,7 @@ const equipe = {
             {
                 role: 'Basse',
                 nom: 'Victoria FALCONE',
-                photo: 'Zikos - Vicky + Modération.jpg'
+                photo: 'Zikos - Vicky + Moderation.jpg'
             },
             {
                 role: 'Flûte',
@@ -331,7 +331,7 @@ const equipe = {
             {
                 role: 'Flûte',
                 nom: 'Léa MOOTHOOCARPEN',
-                photo: 'Zikos - Léa.jpg'
+                photo: 'Zikos - Lea.jpg'
             },
             {
                 role: 'Hautbois',
@@ -361,7 +361,7 @@ const equipe = {
             {
                 role: 'Contrebasse',
                 nom: 'Gauthier DECOUTURE',
-                photo: 'Zikos - Modération + Vicky.jpg'
+                photo: 'Zikos - Moderation + Vicky.jpg'
             },
             {
                 role: 'Violoncelle',
@@ -407,7 +407,7 @@ const equipe = {
             },
             {
                 role: 'Danseuse',
-                nom: 'Cécilia TEKNETZIAN',
+                nom: 'Cecilia TEKNETZIAN',
                 photo: 'Danse - Cécilia.jpg'
             },
             {
@@ -460,7 +460,7 @@ const equipe = {
             {
                 role: 'Respo costumes',
                 nom: 'Aurélien BLANCHET',
-                photo: 'Costumes - Lafé.jpg'
+                photo: 'Costumes - Lafe.jpg'
             },
             {
                 role: 'Respo costumes',
@@ -495,7 +495,7 @@ const equipe = {
             {
                 role: 'Costumière',
                 nom: 'Sélène CHAUSSON',
-                photo: 'Costumes - Sélène.jpg'
+                photo: 'Costumes - Selene.jpg'
             }
         ]
     },
@@ -507,47 +507,47 @@ const equipe = {
             {
                 role: 'Respo décors',
                 nom: 'Adrien FALOURD',
-                photo: 'Décors - Shall.jpg'
+                photo: 'Decors - Shall.jpg'
             },
             {
                 role: 'Respo décors',
                 nom: 'Elliot MALHERBES',
-                photo: 'Décors - Elliot.jpg'
+                photo: 'Decors - Elliot.jpg'
             },
             {
                 role: 'Décorateur',
                 nom: 'Adrien LEMEILLE',
-                photo: 'Décors - Nüjan.jpg'
+                photo: 'Decors - Nujan.jpg'
             },
             {
                 role: 'Décoratrice',
                 nom: 'Apolline MATTEÏ',
-                photo: 'Décors - Zoom.jpg'
+                photo: 'Decors - Zoom.jpg'
             },
             {
                 role: 'Décoratrice',
                 nom: 'Ariane KERAUDREN',
-                photo: 'Décors - Nerissou.jpg'
+                photo: 'Decors - Nerissou.jpg'
             },
             {
                 role: 'Décoratrice',
                 nom: 'Colombe LOVITON',
-                photo: 'Décors - Sheel.jpg'
+                photo: 'Decors - Sheel.jpg'
             },
             {
                 role: 'Décoratrice',
                 nom: 'Marine SAUREL',
-                photo: 'Décors - Marine.jpg'
+                photo: 'Decors - Marine.jpg'
             },
             {
                 role: 'Décoratrice',
                 nom: 'Thaïs ORIOL',
-                photo: 'Décors - Kala.jpg'
+                photo: 'Decors - Kala.jpg'
             },
             {
                 role: 'Décorateur',
                 nom: 'David WAGNER',
-                photo: 'Décors - Bheydai.jpg'
+                photo: 'Decors - Bheydai.jpg'
             }
         ]
     },
@@ -559,12 +559,12 @@ const equipe = {
             {
                 role: 'Respo lumière',
                 nom: 'Marius GONIDEC',
-                photo: 'Lumières - Marius.jpg'
+                photo: 'Lumieres - Marius.jpg'
             },
             {
                 role: 'Lumière',
                 nom: 'Leny-Jazz MAZOYER',
-                photo: 'Lumières - Leny-Jazz.jpg'
+                photo: 'Lumieres - Leny-Jazz.jpg'
             },
             {
                 role: 'Respo son',
