@@ -16,18 +16,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </template>
 
@@ -46,9 +34,7 @@ const presentation = {
             futur meilleur et des fractures qui semblent irréparables. Entre trahisons familiales et
             secrets d’État, comment se reconstruire quand le passé refuse de s’effacer ?
         </p>
-`,
-
-
+        `,
     bgImage: '/images/equipes/equipe--2025.jpg',
     image: '/images/affiches/affiche--2025.jpg'
 }
