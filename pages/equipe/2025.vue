@@ -57,7 +57,7 @@ const equipe = {
                     photo: 'Buro - Jo.jpg'
                 },
                 {
-                    role: 'Secrétaire Générale',
+                    role: 'Secrétaire Général',
                     nom: "Vincent ROUARET",
                     photo: 'Buro - Vincent.jpg'
                 },
@@ -211,7 +211,7 @@ const equipe = {
         ]
     },
     chant: {
-        pole: 'Chant',
+        pole: 'Choristes',
         logo: '/logos/poles/2024/choristes.png',
         personnes: [
             {
@@ -262,12 +262,12 @@ const equipe = {
         logo: '/logos/poles/2024/composition.png',
         personnes: [
             {
-                role: 'Respo compositeur',
+                role: 'Respo composition',
                 nom: 'Mattéo BEVILACQUA',
                 photo: 'Compo - Cyhagha.jpg'
             },
             {
-                role: 'Respo compositeur',
+                role: 'Respo composition',
                 nom: 'Erik DELAUNAY',
                 photo: 'Compo - Erik.jpg'
             },
@@ -306,7 +306,7 @@ const equipe = {
             {
                 role: 'Piano',
                 nom: 'Lyna May MOKRANI',
-                photo: 'Zikos - Adhi.jpg'
+                photo: 'Zikos - Delis.jpg'
             },
             {
                 role: 'Batterie',
