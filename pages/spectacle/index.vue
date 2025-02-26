@@ -5,14 +5,13 @@
 
     <!-- Editions de  l'année -->
 
-    <SpectacleAnnee id="infos" :image="affiche" :bg-image="bgImage"
-      :text="infos" />
+    <SpectacleAnnee id="infos" :image="affiche" :bg-image="bgImage" :text="infos" />
 
     <!-- Les éditions précédentes -->
     <div id="precedentes">
       <h2>Éditions précédentes</h2>
       <a v-for="(annee, id) in anneesPassees" :key="id" class="inline-link" :href="'#' + annee.annee">{{ annee.annee
-        }}</a>
+      }}</a>
     </div>
 
     <div v-for="(annee, id) in anneesPassees" :key="id">
@@ -26,10 +25,23 @@
 <script>
 
 // Ici le contenu pour l'édition actuelle
-const infos = "Commuz' 2025"
+const infos = `
+        <h2>2025 - Face au Mur</h2>
+        <p>
+            <span class="text-[var(--redLight2025)]">Berlin, 1989</span>.
+            Trois jours après la chute du Mur, tandis que la Stasi s’empresse
+            d’effacer les traces de ses crimes, un père retrouve enfin sa famille à l’Est après cinq ans
+            d’absence. Mais ces retrouvailles sont vite troublées par de lourds secrets.
+        </p>
+        <p>
+            À l’image de la société allemande, la famille Neumann est tiraillée entre l’espoir d’un
+            futur meilleur et des fractures qui semblent irréparables. Entre trahisons familiales et
+            secrets d’État, comment se reconstruire quand le passé refuse de s’effacer ?
+        </p>
+        `
 
-const affiche = ""
-const bgImage = "/images/equipes/equipe--2024.jpg"
+const affiche = "/images/affiches/affiche--2025.jpg"
+const bgImage = "/images/equipes/equipe--2025.jpg"
 
 // "<p>1851. Le Léviathan, train gigantesque de l’ingénieur Robert Fawkes, achève sa tournée inaugurale. Après avoir traversé toutes les capitales européennes, le prodige s'apprête à rejoindre Londres pour l’ouverture de l’Exposition Universelle. À l’heure de l’avènement du libéralisme, les braises de la Confrérie Ouvrière semblent se raviver. On murmure que Thomas Ravet préparerait son retour. </p>" +
 // '<p>Pour en savoir plus concernant l’édition 2023 rendez-vous <a style="color: var(--pink);" class="inline-link" target="_blank" href="/commuz2023">sur cette page</a>.</p>' +
@@ -38,7 +50,32 @@ const bgImage = "/images/equipes/equipe--2024.jpg"
 
 // Les éditions précédentes
 const anneesPassees = [
-{
+  // {
+  //   annee: 2025,
+  //   text: `
+  //       <h2>2025 - Face au Mur</h2>
+  //       <p>
+  //           <span class="text-[var(--redLight2025)]">Berlin, 1989</span>.
+  //           Trois jours après la chute du Mur, tandis que la Stasi s’empresse
+  //           d’effacer les traces de ses crimes, un père retrouve enfin sa famille à l’Est après cinq ans
+  //           d’absence. Mais ces retrouvailles sont vite troublées par de lourds secrets.
+  //       </p>
+  //       <p>
+  //           À l’image de la société allemande, la famille Neumann est tiraillée entre l’espoir d’un
+  //           futur meilleur et des fractures qui semblent irréparables. Entre trahisons familiales et
+  //           secrets d’État, comment se reconstruire quand le passé refuse de s’effacer ?
+  //       </p>
+  //       `,
+  //   bgImage: '/images/equipes/equipe--2025.jpg',
+  //   image: '/images/affiches/affiche--2025.jpg',
+  //   galerie: false,
+  //   equipe: true,
+  //   page: true,
+  //   deezer: null,
+  //   spotify: null,
+  //   youtube: null,
+  // },
+  {
     annee: 2024,
     text: "<h2>2024 - Backstage</h2><p>Hollywood, 1964. Le Highlight Show, le talk show le plus populaire des Etats-Unis, est au sommet de sa gloire. Mais au cours d’une énième émission, son host Alec Keaton décide subitement de prendre sa retraite. Face à l’urgence de la situation, la productrice Norma Desmond mettra tout en œuvre pour assurer le maintien de l’émission. Mais c’est sans compter le désir de vengeance de son ex-mari Paul, prêt à tout pour détruire le Highlight, et les machinations du “Réseau”, une mystérieuse organisation qui risque bien de révéler au grand jour les secrets les plus intimes de nos héros. Derrière les paillettes, Backstage explore les coulisses du showbusiness, entre amours, passions et ambitions.</p>",
     bgImage: '/images/equipes/equipe--2024.jpg',

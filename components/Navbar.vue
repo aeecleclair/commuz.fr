@@ -18,7 +18,7 @@
         <NuxtLink active-class="navbar__link--active" to="/galerie/2024" class="navbar__link">Les photos</NuxtLink>
       </li>
       <li class="navbar__item">
-        <NuxtLink active-class="navbar__link--active" to="/equipe/2024" class="navbar__link">L'équipe</NuxtLink>
+        <NuxtLink active-class="navbar__link--active" to="/equipe/2025" class="navbar__link">L'équipe</NuxtLink>
       </li>
       <li class="navbar__item">
         <NuxtLink active-class="navbar__link--active" to="/partenariats" class="navbar__link">Partenariats</NuxtLink>

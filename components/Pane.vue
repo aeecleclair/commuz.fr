@@ -1,9 +1,9 @@
 <template lang="html">
   <div :class="type">
     <div class="pane__text_container">
-      <img v-if="type == 'pane--media-left'" class="pane__img" :src="image">
+      <NuxtImg v-if="type == 'pane--media-left'" class="pane__img" :src="image" />
       <div class="pane__text">
-        <div v-html='text'/>
+        <div v-html='text' />
         <div v-if="galerie || equipe || youtube" class="annee__links" style="justify-content: center" width="100%">
           <table>
             <tr align="center">
@@ -11,19 +11,22 @@
                 <th>
                   <div v-if='deezer != ""'>
                     <a :href="deezer" @click="navigate">
-                      <img src="/icons/Deezer.png" alt=""></a>
+                      <NuxtImg src="/icons/Deezer.png" alt="" />
+                    </a>
                   </div>
                 </th>
                 <th>
                   <div v-if='youtube != ""'>
                     <a :href="youtube" @click="navigate">
-                      <img src="/icons/Youtube.png" alt=""></a>
+                      <NuxtImg src="/icons/Youtube.png" alt="" />
+                    </a>
                   </div>
                 </th>
                 <th>
                   <div v-if='spotify != ""'>
                     <a :href="spotify" @click="navigate">
-                      <img src="/icons/Spotify.png" alt=""></a>
+                      <NuxtImg src="/icons/Spotify.png" alt="" />
+                    </a>
                   </div>
                 </th>
               </table>
@@ -32,14 +35,18 @@
               <table>
                 <th>
                   <div v-if="galerie" class="button-link">
-                    <router-link class="" :to="`/galerie/${annee}`"><img src="/icons/galerie.svg" alt="">Voir les
-                      photos</router-link>
+                    <router-link class="" :to="`/galerie/${annee}`">
+                      <NuxtImg src="/icons/galerie.svg" alt="" />Voir les
+                      photos
+                    </router-link>
                   </div>
                 </th>
                 <th>
                   <div v-if="equipe" class="button-link">
-                    <router-link class="" :to="`/equipe/${annee}`"><img src="/icons/equipe.svg" alt="">Voir
-                      l'équipe</router-link>
+                    <router-link class="" :to="`/equipe/${annee}`">
+                      <NuxtImg src="/icons/equipe.svg" alt="" />Voir
+                      l'équipe
+                    </router-link>
                   </div>
                 </th>
               </table>
@@ -47,12 +54,12 @@
           </table>
         </div>
       </div>
-      <img v-if="type == 'pane--media'" class="pane__img" :src="image">
+      <NuxtImg v-if="type == 'pane--media'" class="pane__img" :src="image" />
 
 
     </div>
 
-    <img v-if="bgImage != ''" class="pane__bg" :src="bgImage">
+    <NuxtImg v-if="bgImage != ''" class="pane__bg" :src="bgImage" />
   </div>
 </template>
 
