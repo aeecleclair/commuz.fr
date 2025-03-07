@@ -1,6 +1,6 @@
 <template lang="html">
   <div style="overflow-y: hidden;">
-    <audio id="commurge_audio" type="audio/mp3" src="/c/commurge/music/jul.mp3" autoplay loop/>
+    <audio id="commurge_audio" type="audio/mp3" src="/c/commurge/music/jul.mp3" autoplay loop />
 
     <div id="commurge__container">
       <div id="overlay_chope">
@@ -26,11 +26,12 @@
           </div>
           <div id="chopOrNot">
             <p id="send_no_chope" class="answer_chope" @click="sendChope('no')">🤮</p>
-            <p id="super_chope" class="answer_chope" @click="sendSuperChope()"/>
+            <p id="super_chope" class="answer_chope" @click="sendSuperChope()" />
             <p id="send_chope" class="answer_chope" @click="sendChope('yes')">🥰</p>
           </div>
           <div id="chopOrNot">
-            <p/><p id="counter_no" style="color: #00FF00">0</p> / <p id="counter_yes" style="color: rgb(255, 0, 0)">0</p>
+            <p />
+            <p id="counter_no" style="color: #00FF00">0</p> / <p id="counter_yes" style="color: rgb(255, 0, 0)">0</p>
 
           </div>
         </div>
@@ -124,7 +125,8 @@ const applyChope = function (commuzard, id) {
   const chopeImg = document.getElementById(id + '_photo')
   const chopeName = document.getElementById(id + '__name')
   const chopeDesc = document.getElementById(id + '__desc')
-  chopeImg.src = `/c/commurge/pictures/${commuzard[3]}`
+  //chopeImg.src = `/c/commurge/pictures/${commuzard[3]}`
+  chopeImg.src = `/images/equipes/2025/${commuzard[3]}`
   chopeName.innerHTML = `${commuzard[0]}`
   chopeDesc.innerHTML = `${commuzard[4]} - ${commuzard[1]} - ${commuzard[2]}`
 }
@@ -307,7 +309,7 @@ export default defineComponent({
     //  .then(t => { t.forEach(e => commuzards.push(e.split(';'))) })
 
 
-    await fetch('https://commuz.fr/c/commurge/infos.csv')
+    await fetch('/c/commurge/infos.csv')
       .then((response) => response.text())
       .then(csv => csv.split('\n'))
       .then(t => { t.forEach(e => commuzards.push(e.split(';'))) })
