@@ -1,20 +1,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: [
-    "nuxt-gtag",
-    "@nuxt/image",
-    "@nuxt/eslint",
-    "@nuxt/ui",
-    "@nuxt/scripts",
-  ],
+  modules: ["@nuxt/image", "@nuxt/eslint", "@nuxt/ui", "@nuxt/scripts"],
 
   image: {
     format: ["webp"],
-  },
-
-  gtag: {
-    id: "G-CC0ZQE9TB5",
   },
 
   css: ["~/assets/css/global.scss"],
