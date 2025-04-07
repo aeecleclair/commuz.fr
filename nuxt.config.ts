@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     format: ["webp"],
   },
 
-  css: ["~/assets/css/global.scss"],
+  css: ["~/assets/css/main.css", "~/assets/css/global.scss"],
 
   colorMode: {
     preference: "dark",

@@ -9,15 +9,15 @@
     <div class="flex flex-col gap-40 px-10 md:px-40 mt-30 pt-10 mb-40 snap-start">
 
       <UCard class="group py-10 my-5" :ui="{ background: 'bg-white dark:bg-white' }">
-        <div class="flex flex-col items-center justify-center text-primary">
-          <span class="text-xl text-gray-700">La Commuz' présente son spectacle 2025</span>
+        <div class="flex flex-col items-center justify-center text-(--ui-primary)">
+          <span class="text-xl text-neutral-700">La Commuz' présente son spectacle 2025</span>
 
           <span
             class="text-5xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-size-200 bg-pos-0 text-transparent group-hover:bg-pos-100 bg-clip-text mt-3">
             FACE AU MUR
           </span>
 
-          <NuxtLink to="/spectacle/2025" class="text-gray-400 hover:text-gray-700 mt-4">
+          <NuxtLink to="/spectacle/2025" class="text-neutral-400 hover:text-neutral-700 mt-4">
             <span class="flex flex-row items-center space-x-2">
               <span>En savoir plus </span>
               <UIcon name="i-heroicons-arrow-long-right-solid" />

@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col items-center space-y-5 my-8">
+  <div class="flex flex-col items-center space-y-5 py-8 gap-4">
 
     <h1
       class="text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl dark:text-white text-center beyond">
-      <!-- We may use text-gray-900 for light mode-->
+      <!-- We may use text-neutral-900 for light mode-->
       La Commuz'
     </h1>
 
@@ -18,41 +18,41 @@
             class="flex flex-row items-center space-x-2 caviar text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500">
             La Commuz' recrute, rejoignez l'aventure !
           </div>
-          <div class="flex flex-row items-center space-x-2 mt-4">
+          <div class="flex flex-row items-center space-x-2 mt-4 gap-2">
             <span class="text-sm caviar text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500">En
               savoir plus</span>
             <UIcon name="i-heroicons-arrow-right"
-              class="w-4 h-4 mx-2 text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500" />
+              class="w-4 h-4 text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500" />
           </div>
         </div>
       </UCard>
     </a>
 
-    <p class="caviar flex flex-row items-center pb-5 text-center">
-      <UIcon name="i-heroicons-sparkles" class="w-5 h-5 mx-2" />
+    <p class="caviar flex flex-row items-center pb-5 text-center gap-2">
+      <UIcon name="i-heroicons-sparkles" class="w-5 h-5" />
       Retrouvez-nous sur vos réseaux préférés
-      <UIcon name="i-heroicons-sparkles" class="w-5 h-5 mx-2" />
+      <UIcon name="i-heroicons-sparkles" class="w-5 h-5" />
     </p>
 
     <a v-for="item in links" :key="item.text" :href="item.link" target="_blank">
       <UCard class="w-80 flex flex-col items-center">
-        <div class="flex flex-row items-center space-x-2  caviar text-commuz-500">
-          <UIcon :name="item.icon" class="w-5 h-5 mx-2" />
+        <div class="flex flex-row items-center space-x-2  caviar text-commuz-500 gap-2">
+          <UIcon :name="item.icon" class="w-5 h-5" />
           {{ item.text }}
         </div>
       </UCard>
     </a>
 
-    <p class="caviar flex flex-row items-center py-5 text-center">
-      <UIcon name="i-heroicons-musical-note" class="w-5 h-5 mx-2" />
+    <p class="caviar flex flex-row items-center py-5 text-center gap-2">
+      <UIcon name="i-heroicons-musical-note" class="w-5 h-5" />
       Écoutez nos albums sur la plateforme de streaming de votre choix
-      <UIcon name="i-heroicons-musical-note" class="w-5 h-5 mx-2" />
+      <UIcon name="i-heroicons-musical-note" class="w-5 h-5" />
     </p>
 
     <a v-for="item in albums" :key="item.text" :href="item.link" target="_blank">
       <UCard class="w-80 flex flex-col items-center">
-        <div class="flex flex-row items-center space-x-2  caviar text-commuz-500">
-          <UIcon :name="item.icon" class="w-5 h-5 mx-2" />
+        <div class="flex flex-row items-center space-x-2 caviar text-commuz-500 gap-2">
+          <UIcon :name="item.icon" class="w-5 h-5" />
           {{ item.text }}
         </div>
       </UCard>

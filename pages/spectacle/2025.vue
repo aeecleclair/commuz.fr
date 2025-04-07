@@ -90,25 +90,27 @@
                     </div>
                 </div>
 
-                <UModal v-model="isBuyATicketOpen">
-                    <UCard
-                        :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800', background: 'bg-gray-900 dark:bg-gray-900' }">
-                        <div class="flex flex-col">
+                <UModal v-model:open="isBuyATicketOpen">
+                    <template #content>
+                        <UCard
+                            :ui="{ ring: '', divide: 'divide-y divide-neutral-100 dark:divide-neutral-800', background: 'bg-neutral-900 dark:bg-neutral-900' }">
+                            <div class="flex flex-col">
 
-                            <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
-                                <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
-                                Face au Mur
+                                <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
+                                    <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
+                                    Face au Mur
+                                </div>
+
+                                <span class="mb-2">Choisissez une représentation :</span>
+
+                                <NuxtLink v-for="date in dates" :key="date.text" :to="date.link" target="_blank"
+                                    class="flex flex-row items-center gap-1 pb-2 hover:text-[var(--redLight2025)]">
+                                    <UIcon name="i-heroicons-arrow-long-right-20-solid" class="w-5 h-5" />
+                                    {{ date.text }}
+                                </NuxtLink>
                             </div>
-
-                            <span class="mb-2">Choisissez une représentation :</span>
-
-                            <NuxtLink v-for="date in dates" :key="date.text" :to="date.link" target="_blank"
-                                class="flex flex-row items-center gap-1 pb-2 hover:text-[var(--redLight2025)]">
-                                <UIcon name="i-heroicons-arrow-long-right-20-solid" class="w-5 h-5" />
-                                {{ date.text }}
-                            </NuxtLink>
-                        </div>
-                    </UCard>
+                        </UCard>
+                    </template>
                 </UModal>
 
 
