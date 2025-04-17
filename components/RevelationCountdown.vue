@@ -1,6 +1,6 @@
 <template>
     <div class="h-44 mb-20 flex flex-col justify-center items-center">
-        <span class="mb-10 text-3xl caviar">Révélation du spectacle {{ date.getFullYear() }}</span>
+        <span class="mb-10 text-3xl font-caviar">Révélation du spectacle {{ date.getFullYear() }}</span>
         <div class="flex items-start justify-center w-full gap-4 count-down-main ">
             <div class="timer w-16">
                 <div class="">

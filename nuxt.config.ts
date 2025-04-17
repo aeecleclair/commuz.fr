@@ -1,7 +1,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxt/image", "@nuxt/eslint", "@nuxt/ui", "@nuxt/scripts"],
+  modules: [
+    "@nuxt/image",
+    "@nuxt/eslint",
+    "@nuxt/ui",
+    "@nuxt/scripts",
+    "@nuxt/fonts",
+  ],
 
   image: {
     format: ["webp"],
@@ -11,6 +17,10 @@ export default defineNuxtConfig({
 
   colorMode: {
     preference: "dark",
+  },
+
+  fonts: {
+    priority: ["bunny", "locale"],
   },
 
   vue: {

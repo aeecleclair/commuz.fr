@@ -15,6 +15,7 @@
   "devDependencies": {
     "@iconify-json/ph": "^1.1.14",
     "@nuxt/eslint": "^0.5.1",
+    "@nuxt/fonts": "^0.11.1",
     "@nuxt/image": "^1.7.0",
     "@nuxt/scripts": "^0.10.1",
     "@nuxt/ui": "^3.0.2",

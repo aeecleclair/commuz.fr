@@ -5,7 +5,7 @@
     ">
     <slot />
 
-    <span class="w-4/6 md:w-1/2 caviar text-center p-4">
+    <span class="w-4/6 md:w-1/2 font-caviar text-center p-4">
       <span class="flex flex-col">
         <slot name="title" />
         <slot name="content" />

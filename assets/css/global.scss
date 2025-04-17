@@ -14,28 +14,6 @@ html {
   height: 100vh;
 }
 
-@font-face {
-  font-family: "Beyond The Mountains";
-  src:
-    local("Beyond The Mountains"),
-    url(~/assets/fonts/beyond_the_mountains.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Caviar Dreams";
-  src:
-    local("Caviar Dreams"),
-    url(~/assets/fonts/CaviarDreams.ttf) format("truetype");
-}
-
-.beyond {
-  font-family: "Beyond The Mountains";
-}
-
-.caviar {
-  font-family: "Caviar Dreams";
-}
-
 
 // base theme
 :root {
@@ -61,8 +39,8 @@ a {
 
 // typography
 
-@import url(https://fonts.bunny.net/css?family=alegreya-sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i);
-@import url(https://fonts.bunny.net/css?family=merriweather:300,300i,400,400i,700,700i,900,900i);
+// @import url(https://fonts.bunny.net/css?family=alegreya-sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i);
+// @import url(https://fonts.bunny.net/css?family=merriweather:300,300i,400,400i,700,700i,900,900i);
 
 h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
@@ -72,9 +50,9 @@ body {
   font-size: 18px;
 }
 
-p, span, dt, dd, a, div {
-  font-family: 'Alegreya Sans', sans-serif;
-}
+// p, span, dt, dd, a, div {
+//   font-family: 'Alegreya Sans', sans-serif;
+// }
 
 p {
   line-height: 1.3em;

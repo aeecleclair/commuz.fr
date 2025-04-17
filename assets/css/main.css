@@ -1,2 +1,21 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme {
+  --font-caviar: "Caviar Dreams";
+  --font-beyond: "Beyond The Mountains";
+
+  --font-sans: "Alegreya Sans", sans-serif;
+
+  --color-commuz-50: "#fff0f3";
+  --color-commuz-100: "#ffe2e9";
+  --color-commuz-200: "#ffcad8";
+  --color-commuz-300: "#ff9fb7";
+  --color-commuz-400: "#ff6993";
+  --color-commuz-500: "#fe1b5f";
+  --color-commuz-600: "#ec125e";
+  --color-commuz-700: "#c80850";
+  --color-commuz-800: "#a70a49";
+  --color-commuz-900: "#8f0c45";
+  --color-commuz-950: "#500121";
+}
