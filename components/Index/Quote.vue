@@ -5,7 +5,7 @@
         </p>
         <img src="/icons/quote_open.svg">
         <div class="quote__author">
-            <UAvatar :src="imgSrc" alt="Photo de {{name}}" size="lg" class="mr-4" />
+            <UAvatar :src="imgSrc" alt="Photo de {{name}}" size="lg" />
 
             <span>{{ name }}</span>
         </div>
@@ -47,13 +47,13 @@ defineProps<{
     .quote__author {
         display: flex;
         align-items: center;
+        gap: 1em;
         color: rgb(228, 228, 228);
 
         &>img {
             height: 40px;
             width: 40px;
             border-radius: 100%;
-            margin-right: 1rem;
         }
     }
 }
