@@ -24,17 +24,14 @@ Le site est une refonte menée par Étienne Sanguinetti, inspirée d'un premier 
 - Benjamin Denise : Webmestre du mandat 2021 - 2022 ;
 - Antoine Haynez : Webmestre du mandat 2022 - 2023 ;
 - Frédéric Legrand : Webmestre du mandat 2023 - 2024 ;
-
-# Dépendances
-
-Ce projet a été développé sous Node.js@21.5.0 avec le framework _Nuxt_@3.9.0.
-
-# Latest
-
-- Migrate from Nuxt 2 to Nuxt 3
-- Added support for Google Analytics
+- Armand Didierjean : Webmestre du mandat 2024 - 2025 ;
 
 # Guides
+
+## Pictures illustrating pages
+
+The website contains lots of pictures: on the main page, in `spectacle/{year}`...
+I suggest to keep the best pictures of the previous years, and add a few pictures each years.
 
 ## Add pictures of the spectacle
 
@@ -72,11 +69,17 @@ In [layouts/default.vue](./components/NavBar.vue) you will be able to configure 
 
 - by settings `castingOpen` to true, the website will advertise its casting page. You should set this during the castings phases, but disable it the rest of the year, to prevent unnecessary informations. The majority of /castings pages should not be really relevant for people outside our schools
 
-### The revelation countdown
+## The revelation countdown
 
 Before publishing the presentation page of the new edition (`/spectacle/YEAR`), you can create a countdown page using the component [`RevelationCountdown`](./components/RevelationCountdown.vue)
 
-### Analytics
+## Analytics
+
+The website integrates privacy friendly Plausible Analytics. You can use custom `ref` to analyze where did users get the link from.
+For example use:
+
+- https://commuz.fr/spectacle/2025?ref=comm for printed qrcode in local shops
+- https://commuz.fr/spectacle/2025?ref=mail for link sent by email
 
 ## Integrate a YouTube video
 
@@ -93,7 +96,3 @@ don't forger to fix its size (for example `h-96`)
 ## Fonts
 
 If you need to import fonts, I suggest to use fonts.bunny.net which is more privacy friendly than Google Font
-
-# TODO :
-
-- Rajouter une banière pour pouvoir opt-out du tracking Google Analytics
