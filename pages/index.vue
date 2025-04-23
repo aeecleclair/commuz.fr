@@ -8,8 +8,8 @@
 
     <div class="flex flex-col gap-40 px-10 md:px-40 mt-30 pt-10 mb-40 snap-start">
 
-      <UCard class="group py-10 my-5">
-        <div class=" flex flex-col items-center justify-center text-(--ui-primary) gap-4">
+      <UCard class="group py-10 my-5" :ui="{ root: 'bg-white dark:bg-white' }">
+        <div class="flex flex-col items-center justify-center text-(--ui-primary) gap-2">
           <span class="text-xl text-neutral-700">La Commuz' présente son spectacle 2025</span>
 
           <span
