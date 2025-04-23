@@ -2,21 +2,21 @@
   <div class="flex flex-col items-center space-y-5 py-8 gap-4">
 
     <h1
-      class="text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl dark:text-white text-center font-beyond">
+      class="text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl dark:text-white text-center font-beyond">
       <!-- We may use text-neutral-900 for light mode-->
       La Commuz'
     </h1>
 
-    <a v-if="castingOpen" href="/castings" class="py-5">
+    <a v-if="card !== null" :href="card.href" class="py-5">
       <UCard class="group">
         <div class="w-96 flex flex-col items-center">
           <span
-            class="text-6xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-size-200 bg-pos-0 text-transparent group-hover:bg-pos-100 bg-clip-text">
-            CASTINGS
+            class="text-6xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-[length:200%_200%] bg-[position:0%_0%] text-transparent group-hover:bg-[position:100%_100%] bg-clip-text">
+            {{ card.title }}
           </span>
           <div
             class="flex flex-row items-center space-x-2 font-caviar text-commuz-500 group-hover:text-fuchsia-800 transition-all duration-500">
-            La Commuz' recrute, rejoignez l'aventure !
+            {{ card.desc }}
           </div>
           <div class="flex flex-row items-center space-x-2 mt-4 gap-2">
             <span
@@ -64,6 +64,30 @@
 <script setup lang="ts">
 
 const castingOpen = useState('castingOpen');
+
+let card: {
+  href: string;
+  title: string;
+  desc: string;
+} | null = null;
+
+// If castings are open we show the casting card
+if (castingOpen.value) {
+  card = {
+    href: "/casting",
+    title: "CASTINGS",
+    desc: "La Commuz' recrute, rejoignez l'aventure !",
+  }
+}
+else {
+  // We may show a custom card
+  card = {
+    href: "/spectacle/2025",
+    title: "FACE AU MUR",
+    desc: "La Commuz' présente son spectacle 2025 !",
+  };
+}
+
 
 const links = [
   {
