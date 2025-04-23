@@ -35,6 +35,7 @@
   "dependencies": {
     "add-to-calendar-button": "^2.8.1",
     "animejs": "^3.2.2",
+    "unenv": "^1.10.0",
     "vue-easy-lightbox": "^1.19.0",
     "vuedraggable": "^4.1.0"
   }
