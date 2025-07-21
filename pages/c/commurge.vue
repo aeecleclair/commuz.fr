@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import anime from 'animejs';
+import * as anime from 'animejs';
 import rainingParticles from '~/includes/rainingParticles';
 
 const hashFunction = function (v, a, b, t) {

@@ -554,7 +554,7 @@ const equipe = {
 
     technique: {
         pole: 'Lumière et son',
-        logo: ' /logos/poles/2024/technique.png',
+        logo: '/logos/poles/2024/technique.png',
         personnes: [
             {
                 role: 'Respo lumière',
