@@ -1,16 +1,26 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxt/image", "@nuxt/eslint", "@nuxt/ui", "@nuxt/scripts"],
+  modules: [
+    "@nuxt/image",
+    "@nuxt/eslint",
+    "@nuxt/ui",
+    "@nuxt/scripts",
+    "@nuxt/fonts",
+  ],
 
   image: {
     format: ["webp"],
   },
 
-  css: ["~/assets/css/global.scss"],
+  css: ["~/assets/css/main.css", "~/assets/css/global.scss"],
 
   colorMode: {
     preference: "dark",
+  },
+
+  fonts: {
+    priority: ["bunny", "locale"],
   },
 
   vue: {

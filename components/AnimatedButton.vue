@@ -1,7 +1,7 @@
 <template>
   <div class="new-button-link text-base">
-    <NuxtLink :to="to" class="flex flex-row">
-      <UIcon v-if="icon" :name="icon" class="w-5 h-5 mr-2" />
+    <NuxtLink :to="to" class="flex flex-row gap-2">
+      <UIcon v-if="icon" :name="icon" class="w-5 h-5" />
       {{ text }}
     </NuxtLink>
   </div>

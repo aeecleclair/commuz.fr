@@ -1,7 +1,7 @@
 <template>
 
   <Hero :reversed="reversed">
-    <Carousel :images="images" class="w-4/6" />
+    <Carousel :images="images" class="w-3/6" />
     <template #title>
       <span class="font-extrabold text-commuz-500 text-xl">{{ title }}</span>
     </template>

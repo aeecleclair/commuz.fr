@@ -25,9 +25,9 @@
             </div>
           </div>
           <div id="chopOrNot">
-            <p id="send_no_chope" class="answer_chope" @click="sendChope('no')">🤮</p>
+            <p id="send_no_chope" class="answer_chope" @click="sendChope('no')">👎</p>
             <p id="super_chope" class="answer_chope" @click="sendSuperChope()" />
-            <p id="send_chope" class="answer_chope" @click="sendChope('yes')">🥰</p>
+            <p id="send_chope" class="answer_chope" @click="sendChope('yes')">👍</p>
           </div>
           <div id="chopOrNot">
             <p />
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import anime from 'animejs';
+import * as anime from 'animejs';
 import rainingParticles from '~/includes/rainingParticles';
 
 const hashFunction = function (v, a, b, t) {

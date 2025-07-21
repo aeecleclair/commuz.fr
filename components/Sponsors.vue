@@ -9,18 +9,27 @@
 
     </div>
     <div id="sponsors__logos">
-      <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener"><img src="/sponsors/ecl.png"
-          alt="Logo de l'École Centrale de Lyon"></a>
-      <a href="https://www.em-lyon.com" target="_blank" rel="noopener"><img src="/sponsors/em_corpo.svg"
-          alt="Logo de la corpo emlyon business school"></a>
-      <a href="http://www.crous-lyon.fr/" target="_blank" rel="noopener"><img src="/sponsors/crous.png"
-          alt="Logo du Crous de Lyon"></a>
-      <a href="https://www.universite-lyon.fr/" target="_blank" rel="noopener"><img src="/sponsors/udl.svg"
-          alt="Logo de l'Université de Lyon"></a>
-      <a href="https://www.lyon.fr/" target="_blank" rel="noopener"><img src="/sponsors/vdl.png"
-          alt="Logo de la ville de Lyon"></a>
-      <a href="https://www.emlyon-alumni.com" target="_blank" rel="noopener"><img src="/sponsors/emlyon_alumni.png"
-          alt="Logo de emlyon alumni"></a>
+      <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/ecl.svg" class="h-50" alt="Logo de l'École Centrale de Lyon" />
+      </a>
+      <a href="https://myecl.fr" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/aeecl.svg" class="h-50" alt="Logo de l'AEECL" />
+      </a>
+      <a href="https://www.em-lyon.com" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/em_corpo.svg" class="h-50" alt="Logo de la corpo emlyon business school" />
+      </a>
+      <a href="http://www.crous-lyon.fr/" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/crous.png" class="h-50" alt="Logo du Crous de Lyon" />
+      </a>
+      <a href="https://www.universite-lyon.fr/" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/udl.svg" class="h-50" alt="Logo de l'Université de Lyon" />
+      </a>
+      <a href="https://www.lyon.fr/" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/vdl.png" class="h-50" alt="Logo de la ville de Lyon" />
+      </a>
+      <a href="https://www.emlyon-alumni.com" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/emlyon_alumni.png" alt="Logo de emlyon alumni" />
+      </a>
     </div>
   </section>
 </template>

@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-around items-center">
-                        <div class="md:w-1/2">
+                        <div class="md:w-2/3">
                             À l’image de la société allemande, la famille Neumann est tiraillée entre l’espoir d’un
                             futur meilleur et des fractures qui semblent irréparables. Entre trahisons familiales et
                             secrets d’État, comment se reconstruire quand le passé refuse de s’effacer ?
@@ -90,25 +90,27 @@
                     </div>
                 </div>
 
-                <UModal v-model="isBuyATicketOpen">
-                    <UCard
-                        :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800', background: 'bg-gray-900 dark:bg-gray-900' }">
-                        <div class="flex flex-col">
+                <UModal v-model:open="isBuyATicketOpen">
+                    <template #content>
+                        <UCard
+                            :ui="{ ring: '', divide: 'divide-y divide-neutral-100 dark:divide-neutral-800', background: 'bg-neutral-900 dark:bg-neutral-900' }">
+                            <div class="flex flex-col">
 
-                            <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
-                                <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
-                                Face au Mur
+                                <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
+                                    <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
+                                    Face au Mur
+                                </div>
+
+                                <span class="mb-2">Choisissez une représentation :</span>
+
+                                <NuxtLink v-for="date in dates" :key="date.text" :to="date.link" target="_blank"
+                                    class="flex flex-row items-center gap-1 pb-2 hover:text-[var(--redLight2025)]">
+                                    <UIcon name="i-heroicons-arrow-long-right-20-solid" class="w-5 h-5" />
+                                    {{ date.text }}
+                                </NuxtLink>
                             </div>
-
-                            <span class="mb-2">Choisissez une représentation :</span>
-
-                            <NuxtLink v-for="date in dates" :key="date.text" :to="date.link" target="_blank"
-                                class="flex flex-row items-center gap-1 pb-2 hover:text-[var(--redLight2025)]">
-                                <UIcon name="i-heroicons-arrow-long-right-20-solid" class="w-5 h-5" />
-                                {{ date.text }}
-                            </NuxtLink>
-                        </div>
-                    </UCard>
+                        </UCard>
+                    </template>
                 </UModal>
 
 

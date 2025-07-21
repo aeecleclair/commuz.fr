@@ -6,9 +6,9 @@
       <div id="plaquette">
         <p>
           Téléchargez notre
-          <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf" download>
+          <NuxtLink class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf" download>
             plaquette partenariats
-          </a>,
+          </NuxtLink>,
           ou contactez notre responsable partenariat Gwladys à l'adresse
           <a href="mailto:partenariat@commuz.fr">
             partenariat@commuz.fr

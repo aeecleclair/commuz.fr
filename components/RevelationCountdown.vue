@@ -1,6 +1,6 @@
 <template>
     <div class="h-44 mb-20 flex flex-col justify-center items-center">
-        <span class="mb-10 text-3xl caviar">Révélation du spectacle {{ date.getFullYear() }}</span>
+        <span class="mb-10 text-3xl font-caviar">Révélation du spectacle {{ date.getFullYear() }}</span>
         <div class="flex items-start justify-center w-full gap-4 count-down-main ">
             <div class="timer w-16">
                 <div class="">
@@ -8,18 +8,18 @@
                         {{ daysString }}
                     </h3>
                 </div>
-                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">jours</p>
+                <p class="text-sm font-normal text-neutral-900 mt-1 text-center w-full text-white">jours</p>
             </div>
-            <h3 class="font-manrope font-semibold text-2xl text-gray-900 text-white">:</h3>
+            <h3 class="font-manrope font-semibold text-2xl text-neutral-900 text-white">:</h3>
             <div class="timer w-16">
                 <div class="">
                     <h3 class="countdown-element hours font-manrope font-semibold text-2xl text-commuz-500 text-center">
                         {{ hoursString }}
                     </h3>
                 </div>
-                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">heures</p>
+                <p class="text-sm font-normal text-neutral-900 mt-1 text-center w-full text-white">heures</p>
             </div>
-            <h3 class="font-manrope font-semibold text-2xl text-gray-900 text-white">:</h3>
+            <h3 class="font-manrope font-semibold text-2xl text-neutral-900 text-white">:</h3>
             <div class="timer w-16">
                 <div class="">
                     <h3 class="countdown-element minutes font-manrope font-semibold text-2xl text-commuz-500
@@ -27,9 +27,9 @@
                         {{ minutesString }}
                     </h3>
                 </div>
-                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">minutes</p>
+                <p class="text-sm font-normal text-neutral-900 mt-1 text-center w-full text-white">minutes</p>
             </div>
-            <h3 class="font-manrope font-semibold text-2xl text-gray-900 text-white">:</h3>
+            <h3 class="font-manrope font-semibold text-2xl text-neutral-900 text-white">:</h3>
             <div class="timer w-16">
                 <div class="">
                     <h3 class="countdown-element seconds font-manrope font-semibold text-2xl text-commuz-500
@@ -37,7 +37,7 @@
                         {{ secondsString }}
                     </h3>
                 </div>
-                <p class="text-sm font-normal text-gray-900 mt-1 text-center w-full text-white">secondes</p>
+                <p class="text-sm font-normal text-neutral-900 mt-1 text-center w-full text-white">secondes</p>
             </div>
         </div>
 

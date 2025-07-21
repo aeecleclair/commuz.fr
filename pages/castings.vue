@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center space-y-5 my-8">
 
     <h1 class="text-4xl font-extrabold md:text-5xl lg:text-6xl dark:text-white text-center flex flex-col ">
-      <!-- We may use text-gray-900 for light mode-->
+      <!-- We may use text-neutral-900 for light mode-->
       <span>Bonne nouvelle</span>
       <span>La Commuz' recrute !</span>
     </h1>
@@ -14,7 +14,7 @@
         castings sont ouverts à toutes et tous.
       </div>
       <div class="md:w-1/2">
-        Au programme : {{ poles.map(pole => pole.name.toLowerCase()).join(", ") }}.
+        Au programme : {{poles.map(pole => pole.name.toLowerCase()).join(", ")}}.
       </div>
       <div>
         <AnimatedNuxtLink text="Découvrir la Commuz'" to="/" icon="i-heroicons-arrow-long-right-solid" />
@@ -82,6 +82,14 @@ const year = 2025;
 
 
 const poles = [
+  {
+    name: "Danseur.euse",
+    description: `Le pôle danse met les tableaux en mouvement et fait vibrer les spectateurs ! C’est aussi beaucoup de rires, d’ambiance et de bienveillance ! Peu importe votre niveau et votre style de danse (jazz, classique, hip hop, contempo ou autre !), tentez votre chance, on est open à tout ! L’objectif c’est avant tout de
+vivre une expérience incroyable tous ensemble et de KIFFER !`,
+    imageFolder: "danse"
+  },
+
+  /* Castings septembre */
   /*
   {
     name: "Acteur.rice chanteur.euse",
