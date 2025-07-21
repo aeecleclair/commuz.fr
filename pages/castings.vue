@@ -82,6 +82,14 @@ const year = 2025;
 
 
 const poles = [
+  {
+    name: "Danseur.euse",
+    description: `Le pôle danse met les tableaux en mouvement et fait vibrer les spectateurs ! C’est aussi beaucoup de rires, d’ambiance et de bienveillance ! Peu importe votre niveau et votre style de danse (jazz, classique, hip hop, contempo ou autre !), tentez votre chance, on est open à tout ! L’objectif c’est avant tout de
+vivre une expérience incroyable tous ensemble et de KIFFER !`,
+    imageFolder: "danse"
+  },
+
+  /* Castings septembre */
   /*
   {
     name: "Acteur.rice chanteur.euse",
