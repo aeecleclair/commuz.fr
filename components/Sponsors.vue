@@ -27,8 +27,9 @@
       <a href="https://www.lyon.fr/" target="_blank" rel="noopener">
         <NuxtImg src="/sponsors/vdl.png" class="h-50" alt="Logo de la ville de Lyon" />
       </a>
-      <!-- <a href="https://www.emlyon-alumni.com" target="_blank" rel="noopener"><NuxtImg src="/sponsors/emlyon_alumni.png"
-          alt="Logo de emlyon alumni" /></a> -->
+      <a href="https://www.emlyon-alumni.com" target="_blank" rel="noopener">
+        <NuxtImg src="/sponsors/emlyon_alumni.png" alt="Logo de emlyon alumni" />
+      </a>
     </div>
   </section>
 </template>

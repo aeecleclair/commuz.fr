@@ -1,5 +1,5 @@
 <template>
-  <div :class="'flex gap-4 items-center justify-center ' +
+  <div :class="'flex gap-4 md:gap-16 items-center justify-center ' +
     (reversed ? ' md:flex-row-reverse' : 'md:flex-row') +
     ' flex-col'
     ">

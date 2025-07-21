@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-around items-center">
-                        <div class="md:w-1/2">
+                        <div class="md:w-2/3">
                             À l’image de la société allemande, la famille Neumann est tiraillée entre l’espoir d’un
                             futur meilleur et des fractures qui semblent irréparables. Entre trahisons familiales et
                             secrets d’État, comment se reconstruire quand le passé refuse de s’effacer ?
