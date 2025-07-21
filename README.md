@@ -28,6 +28,20 @@ Le site est une refonte menée par Étienne Sanguinetti, inspirée d'un premier 
 
 # Guides
 
+## Development envieronnement
+
+The first time you need to install the dependencies
+
+```bash
+npm install
+```
+
+Then to start the development server:
+
+```bash
+npm run dev
+```
+
 ## Pictures illustrating pages
 
 The website contains lots of pictures: on the main page, in `spectacle/{year}`...
