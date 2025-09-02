@@ -42,6 +42,18 @@ Then to start the development server:
 npm run dev
 ```
 
+> If you want to try the build the site for "production"
+>
+> ```bash
+> npm run generate
+> ```
+>
+> To try to run the site in production conditions
+>
+> ```bash
+> npm run preview
+> ```
+
 ## Pictures illustrating pages
 
 The website contains lots of pictures: on the main page, in `spectacle/{year}`...
@@ -79,7 +91,7 @@ For PNG you can use: https://tinypng.com/
 
 ## Configure the website status
 
-In [layouts/default.vue](./components/NavBar.vue) you will be able to configure global variables.
+In [components/NavBar.vue](components/NavBar.vue) you will be able to configure global variables.
 
 - by settings `castingOpen` to true, the website will advertise its casting page. You should set this during the castings phases, but disable it the rest of the year, to prevent unnecessary informations. The majority of /castings pages should not be really relevant for people outside our schools
 
