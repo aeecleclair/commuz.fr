@@ -74,7 +74,7 @@ let card: {
 // If castings are open we show the casting card
 if (castingOpen.value) {
   card = {
-    href: "/casting",
+    href: "/castings",
     title: "CASTINGS",
     desc: "La Commuz' recrute, rejoignez l'aventure !",
   }
