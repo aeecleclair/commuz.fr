@@ -78,7 +78,7 @@
 const castingsAvancesOpen = false;
 const castingsGenerauxOpen = false;
 const castingsComplementairesOpen = true;
-const year = 2025;
+const year = 2026;
 
 
 const poles = [
@@ -90,7 +90,7 @@ vivre une expérience incroyable tous ensemble et de KIFFER !`,
   },
 
   /* Castings septembre */
-  /*
+  
   {
     name: "Acteur.rice chanteur.euse",
     description: `Incarnez un des personnages qui donneront vie à la Commuz’ 2025, et vivez une incroyable aventure artistique et humaine. Pas besoin d’expérience préalable, nous vous accompagnerons avec un coaching individuel en théâtre, en chant et en danse, pour faire de vous une bête de scène !`,
@@ -123,13 +123,13 @@ unique, très prenante et parmi les plus gratifiantes qui soient. C’est simple
     description: `Le pôle Décors est une initiation formidable à la Commuz’, pas de stress de la scène, pas de pression mise par les Respos et que du kiff. On y retrouve des personnes avec beaucoup de talents de bricolage (on sent que les gens ont fait Prépa Techno) et d’autres qui souhaitent s’initier à la bricole et qui grâce à notre pôle se sont découverts une âme d’artiste.`,
     imageFolder: "decors"
   },
-  */
+  
   {
     name: "Costumier.ère",
     description: `Le pôle costume est un pilier de la Commuz’ : il doit réaliser une centaine de costumes pour habiller les acteurs-chanteurs, les choristes, les danseurs, tout en s’inscrivant dans le thème, l’ambiance musicale et l’époque de la pièce. Du design à la réalisation des costumes, en passant par le choix des tissus et des accessoires, tout sera fait par vous si vous nous rejoignez !`,
     imageFolder: "costumes"
   },
-  /*
+  
   {
     name: "Son",
     description: "Vous souhaitez intégrer un pôle technique et développer de vraies compétences en manipulant du matériel professionnel ? Le pôle son vous ouvre les bras ! Confirmé ou débutant, armé de votre motivation et de votre bonne humeur, vous apprendrez comment sonoriser un orchestre entier avec du matériel sensationnel. Vous apprendrez aussi à mixer des musiques pour produire un album, à maîtriser les bruitages et à combattre les larsens.",
@@ -140,13 +140,13 @@ unique, très prenante et parmi les plus gratifiantes qui soient. C’est simple
     description: `Vous souhaitez apprendre à faire de belles vidéos ou encore perfectionner vos compétences de montage, ce poste est fait pour vous ! Au sein du pôle visibilité, vous aurez l’opportunité de travailler avec tous les pôles et de leur créer des souvenirs indélébiles à travers des trailers ou en filmant la Commuz’ le soir des représentations.`,
     imageFolder: "video"
   },
-  */
+  
   {
     name: "Partenariats",
     description: `Le VP Partenariat à la Commuz, c’est le coup de pouce de tout le mandat pour obtenir des fonds servant à proposer un spectacle de qualité et de la nourriture pour les WER ! Cela permet de travailler avec tout le monde et d’apporter sa pierre à l’édifice sans nécessairement avoir besoin de talent artistique : venez avec l’envie de bien faire et vous pourrez vivre une expérience géniale au travers d’un projet annuel fabuleux !`,
     imageFolder: "partenariats"
   },
-  /*
+  
   {
     name: "Amour",
     description: `Imaginer, préparer et servir des petits repas sains et
@@ -156,7 +156,7 @@ nos petits gambins, c'est le travail des VP Amour ! Mais au-delà de la nourritu
 `,
     imageFolder: "amour"
   },
-  */
+  
   {
     name: "Lumière",
     description: `Le pôle Lumière, c’est le pôle qui s’occupe de A à Z de la mise en scène lumineuse de la Commuz’.  Ce pôle doit travailler en étroite collaboration avec les metteurs en scène, les coordinateurs artistiques et tous les autres pôles qui interviennent sur scène pour donner une cohérence lumineuse au spectacle ! Il imagine la scénographie lumineuse et la met en pratique le jour J !
