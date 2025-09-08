@@ -9,7 +9,7 @@
           <NuxtLink class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf" download>
             plaquette partenariats
           </NuxtLink>,
-          ou contactez notre responsable partenariat Gwladys à l'adresse
+          ou contactez notre responsable partenariat Alix à l'adresse
           <a href="mailto:partenariat@commuz.fr">
             partenariat@commuz.fr
           </a>
