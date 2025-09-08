@@ -38,11 +38,11 @@
 <script>
 const respoPartenariats = {
   respo1: {
-    prenom: "Gwladys",
-    nom: "Voisin",
-    telephone: "07 80 00 04 14",
+    prenom: "Alix",
+    nom: "Laroche",
+    telephone: "06 41 96 80 66",
     mail: "commuzlyon@gmail.com",
-    image: "/images/Partenaires/Gwladys.jpeg",
+    image: "/images/Partenaires/Alix.jpeg",
   },
 };
 

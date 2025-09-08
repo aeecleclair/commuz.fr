@@ -27,13 +27,12 @@
     <div id="contact">
       <h3>Contacts</h3>
       <p>Pour toute question, contactez <a class="inline-link"
-          href="mailto:pierrick.durand-glouchkoff@etu.ec-lyon.fr; johanna.dussoux@edu.em-lyon.com">Pierrick, Johanna,
-          Vincent et Romain</a>
-        par
-        mail ou sur notre page <a class="inline-link" target="_blank" rel="noopener"
+          href="mailto:nicolas.watiez@etu.ec-lyon.fr; alix.laroche@edu.em-lyon.com" >Nicolas, Alix,
+          Joséphine <span style="color:#ababab;">et</span> Armand</a>
+        par mail ou sur notre page <a class="inline-link" target="_blank" rel="noopener"
           href="https://www.facebook.com/commuzlyon">Facebook</a>. <br>
         Pour toute demande relative aux partenariats, contactez notre responsable partenariats <a class="inline-link"
-          href="mailto:partenariat@commuz.fr">Gwladys</a>.</p>
+          href="mailto:partenariat@commuz.fr">Alix</a>.</p>
     </div>
   </footer>
 </template>
