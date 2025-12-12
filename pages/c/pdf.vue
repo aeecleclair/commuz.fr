@@ -8,8 +8,8 @@
       <UFileUpload v-model="selectedFiles" multiple accept="application/pdf" label="Téléverser vos partitions"
         description="PDF" layout="list" class="w-96 min-h-48 cursor-pointer" />
 
-      <UButton v-if="selectedFiles.length > 0" @click="merge" icon="i-lucide-rocket" size="md" color="neutral"
-        variant="solid" class="cursor-pointer">
+      <UButton v-if="selectedFiles.length > 0" icon="i-lucide-rocket" size="md" color="neutral" variant="solid"
+        class="cursor-pointer" @click="merge">
         Fusionner les
         PDF
       </UButton>
@@ -26,7 +26,8 @@
 
 <script lang="ts" setup scoped>
 
-import { PDFDocument, PDFPage } from 'pdf-lib'
+import type { PDFPage } from 'pdf-lib';
+import { PDFDocument } from 'pdf-lib'
 import { ref } from "vue"
 
 const selectedFiles = ref<File[]>([])
@@ -91,9 +92,16 @@ async function mergePdfs(pdfsToMerges: ArrayBuffer[]) {
       const page = firstHalfPages.shift()!;
       mergedPdf.addPage(page);
     }
+    else {
+      // Add a blank page if the first half is exhausted
+      mergedPdf.addPage();
+    }
     if (secondHalfPages.length > 0) {
       const page = secondHalfPages.shift()!;
       mergedPdf.addPage(page);
+    } else {
+      // Add a blank page if the second half is exhausted
+      mergedPdf.addPage();
     }
   }
 
