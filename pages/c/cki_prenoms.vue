@@ -1,12 +1,12 @@
-<<template>
+<template>
   <div class="photo-quiz">
-    <img :src="currentPhoto" alt="Random Photo" class="photo" />
+    <p class="question">Sur quelle photo se trouve <strong>{{ correctName }}</strong>?</p>
     <div v-if="!showError" class="buttons flex flex-row justify-center gap-4">
-      <UButton class="bg-commuz-500 hover:bg-commuz-900" v-for="name in currentNames" :key="name" @click="checkAnswer(name)">{{ name }}</UButton>
+      <img v-for="photo in currentPhotos" :key="photo.name" :src="photo.src" alt="Option" class="photo-button" @click="checkAnswer(photo)" />
     </div>
     <div v-else class="error-message">
-      <p>Eh non ! C'était {{ correctName }}.</p>
-      <UButton class="bg-commuz-500 hover:bg-commuz-900 mt-4" @click="continueGame">Continuer</UButton>
+      <p>Eh non! C'était {{ selectedWrongName }}.</p>
+      <UButton class="bg-commuz-500 hover:bg-commuz-900 mt-4" @click="continueGame">Continue</UButton>
     </div>
     <div class="counters">
       <p>Score: {{ score }}</p>
@@ -33,7 +33,7 @@ export default {
         { name: 'Amaury/Sybher', src: '/images/equipes/2026/Photo Trombi/Amaury_Sybher - Zikos_Trompette.png' },
         { name: 'Anaïs', src: '/images/equipes/2026/Photo Trombi/Anaïs - Danse.png' },
         { name: 'Anne-Isabelle', src: '/images/equipes/2026/Photo Trombi/Anne-Isabelle - Scénariste.png' },
-        { name: 'Antony', src: '/images/equipes/2026/Photo Trombi/Antony - Respo Vidéo.png' },
+        { name: 'Anthony', src: '/images/equipes/2026/Photo Trombi/Antony - Respo Vidéo.png' },
         { name: 'Armand/Jhobahtes', src: '/images/equipes/2026/Photo Trombi/Armand_Jhobates - Trez_.png' },
         { name: 'Armel/Garibaldi', src: '/images/equipes/2026/Photo Trombi/Armel_Garibaldi - Respo Zikos.png' },
         { name: 'Audrey/Ophyne', src: '/images/equipes/2026/Photo Trombi/Audrey_Ophyne - Respo Costumes.png' },
@@ -119,56 +119,56 @@ export default {
         { name: 'Tristan/T.A.C', src: '/images/equipes/2026/Photo Trombi/Tristan_T.A.C - Respo Son.png' },
         { name: 'Vincent', src: '/images/equipes/2026/Photo Trombi/Vincent - Amour.png' },
       ],
-
       currentPhoto: '',
-      currentNames: [],
+      currentPhotos: [],
       correctName: '',
       score: 0,
       streak: 0,
       showError: false,
-      recentPhotos: [],
+      selectedWrongName: '',
+      recentNames: [],
     };
   },
   methods: {
     pickRandomPhoto() {
-      const availablePhotos = this.photos.filter(
-        photo => !this.recentPhotos.includes(photo.name)
-      );
+      let randomPhoto;
+      let attempts = 0;
+      const maxAttempts = 50;
       
-      const photosToChooseFrom = availablePhotos.length > 0 ? availablePhotos : this.photos;
+      do {
+        const randomIndex = Math.floor(Math.random() * this.photos.length);
+        randomPhoto = this.photos[randomIndex];
+        attempts++;
+      } while (this.recentNames.includes(randomPhoto.name) && attempts < maxAttempts);
       
-      const randomIndex = Math.floor(Math.random() * photosToChooseFrom.length);
-      const selectedPhoto = photosToChooseFrom[randomIndex];
-      
-      this.currentPhoto = selectedPhoto.src;
-      this.correctName = selectedPhoto.name;
-      
-      this.recentPhotos.push(selectedPhoto.name);
-      if (this.recentPhotos.length > 20) {
-        this.recentPhotos.shift();
+      this.correctName = randomPhoto.name;
+      this.currentPhoto = randomPhoto.src;
+      this.recentNames.push(randomPhoto.name);
+      if (this.recentNames.length > 20) {
+        this.recentNames.shift();
       }
       
       this.pickRandomNames();
     },
-
     pickRandomNames() {
-      const names = this.photos.map(photo => photo.name);
-      this.currentNames = [this.correctName];
-      while (this.currentNames.length < 3) {
-        const randomName = names[Math.floor(Math.random() * names.length)];
-        if (!this.currentNames.includes(randomName)) {
-          this.currentNames.push(randomName);
+      const correctPhoto = this.photos.find(photo => photo.name === this.correctName);
+      this.currentPhotos = [correctPhoto];
+      while (this.currentPhotos.length < 3) {
+        const randomPhoto = this.photos[Math.floor(Math.random() * this.photos.length)];
+        if (!this.currentPhotos.find(p => p.name === randomPhoto.name)) {
+          this.currentPhotos.push(randomPhoto);
         }
       }
-      this.currentNames.sort(() => Math.random() - 0.5);
+      this.currentPhotos.sort(() => Math.random() - 0.5);
     },
-    checkAnswer(selectedName) {
-      if (selectedName === this.correctName) {
+    checkAnswer(selectedPhoto) {
+      if (selectedPhoto.name === this.correctName) {
         this.score++;
         this.streak++;
         this.pickRandomPhoto();
       } else {
         this.streak = 0;
+        this.selectedWrongName = selectedPhoto.name;
         this.showError = true;
       }
     },
@@ -190,26 +190,31 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-.photo {
-  width: 300px;
-  height: auto;
-  display: block;
+.question {
   margin-top: 60px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 .buttons {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 20px;
+  display: flex;
+  flex-row: row;
+  justify-content: center;
+  gap: 20px;
 }
-button {
-  margin: 0 10px;
+.photo-button {
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border 0.3s ease;
+}
+.photo-button:hover {
+  border: 3px solid #5b5b5b;
 }
 .counters {
   margin-top: 20px;
-  margin-bottom: 80px;
-}
-:deep(.bg-commuz-500:active),
-:deep(.bg-commuz-500:focus),
-:deep(.bg-commuz-500.active) {
-  background-color: inherit !important;
+  margin-bottom: 120px;
 }
 </style>
