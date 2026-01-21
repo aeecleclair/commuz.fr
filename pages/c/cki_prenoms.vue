@@ -1,6 +1,14 @@
 <template>
   <div class="photo-quiz">
-    <p class="question">Sur quelle photo se trouve <strong>{{ correctName }}</strong>?</p>
+    <div class="header-row">
+      <p class="question">Sur quelle photo se trouve <strong>{{ correctName }}</strong>?</p>
+      <div class="game-selector">
+        <select v-model="selectedGame" @change="navigateToGame" class="game-dropdown">
+          <option value="/c/cki_photos">Photo → Nom</option>
+          <option value="/c/cki_prenoms">Nom → Photo</option>
+        </select>
+      </div>
+    </div>
     <div v-if="!showError" class="buttons flex flex-row justify-center gap-4">
       <img v-for="photo in currentPhotos" :key="photo.name" :src="photo.src" alt="Option" class="photo-button" @click="checkAnswer(photo)" />
     </div>
@@ -33,7 +41,7 @@ export default {
         { name: 'Amaury/Sybher', src: '/images/equipes/2026/Photo Trombi/Amaury_Sybher - Zikos_Trompette.png' },
         { name: 'Anaïs', src: '/images/equipes/2026/Photo Trombi/Anaïs - Danse.png' },
         { name: 'Anne-Isabelle', src: '/images/equipes/2026/Photo Trombi/Anne-Isabelle - Scénariste.png' },
-        { name: 'Anthony', src: '/images/equipes/2026/Photo Trombi/Antony - Respo Vidéo.png' },
+        { name: 'Antony', src: '/images/equipes/2026/Photo Trombi/Antony - Respo Vidéo.png' },
         { name: 'Armand/Jhobahtes', src: '/images/equipes/2026/Photo Trombi/Armand_Jhobates - Trez_.png' },
         { name: 'Armel/Garibaldi', src: '/images/equipes/2026/Photo Trombi/Armel_Garibaldi - Respo Zikos.png' },
         { name: 'Audrey/Ophyne', src: '/images/equipes/2026/Photo Trombi/Audrey_Ophyne - Respo Costumes.png' },
@@ -126,8 +134,7 @@ export default {
       streak: 0,
       showError: false,
       selectedWrongName: '',
-      recentNames: [],
-    };
+      recentNames: [],      selectedGame: '/c/cki_prenoms',    };
   },
   methods: {
     pickRandomPhoto() {
@@ -176,6 +183,9 @@ export default {
       this.showError = false;
       this.pickRandomPhoto();
     },
+    navigateToGame() {
+      this.$router.push(this.selectedGame);
+    },
   },
   mounted() {
     this.pickRandomPhoto();
@@ -190,10 +200,35 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-.question {
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
   margin-top: 60px;
-  font-size: 1.2rem;
   margin-bottom: 30px;
+}
+.question {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+}
+.game-selector {
+  margin-left: 20px;
+}
+.game-dropdown {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fe1b5f;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+.game-dropdown:hover {
+  border-color: #333;
 }
 .buttons {
   margin-top: 30px;

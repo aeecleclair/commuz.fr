@@ -1,5 +1,14 @@
 <<template>
   <div class="photo-quiz">
+    <div class="header-row">
+      <div class="spacer"></div>
+      <div class="game-selector">
+        <select v-model="selectedGame" @change="navigateToGame" class="game-dropdown">
+          <option value="/c/cki_photos">Photo → Nom</option>
+          <option value="/c/cki_prenoms">Nom → Photo</option>
+        </select>
+      </div>
+    </div>
     <img :src="currentPhoto" alt="Random Photo" class="photo" />
     <div v-if="!showError" class="buttons flex flex-row justify-center gap-4">
       <UButton class="bg-commuz-500 hover:bg-commuz-900" v-for="name in currentNames" :key="name" @click="checkAnswer(name)">{{ name }}</UButton>
@@ -127,6 +136,7 @@ export default {
       streak: 0,
       showError: false,
       recentPhotos: [],
+      selectedGame: '/c/cki_photos',
     };
   },
   methods: {
@@ -176,6 +186,9 @@ export default {
       this.showError = false;
       this.pickRandomPhoto();
     },
+    navigateToGame() {
+      this.$router.push(this.selectedGame);
+    },
   },
   mounted() {
     this.pickRandomPhoto();
@@ -189,6 +202,31 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.header-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.game-selector {
+  margin-right: 20px;
+}
+.game-dropdown {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fe1b5f;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+.game-dropdown:hover {
+  border-color: #333;
 }
 .photo {
   width: 300px;
