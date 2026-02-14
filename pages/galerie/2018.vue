@@ -15,7 +15,7 @@
 <script>
 import VueEasyLightbox from 'vue-easy-lightbox'
 
-const imagesFiles = import.meta.glob('public/images/galeries/2018/*')
+const imagesFiles = import.meta.glob('./public/images/galeries/2018/*')
 
 const imagesPaths = [];
 

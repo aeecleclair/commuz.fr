@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-const imagesFiles = import.meta.glob('public/images/galeries/**')
+const imagesFiles = import.meta.glob('./public/images/galeries/**')
 console.log(imagesFiles)
 
 const years = new Set<string>();
