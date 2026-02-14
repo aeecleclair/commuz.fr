@@ -1,5 +1,11 @@
+import { readdirSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { resolve } from "node:path";
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
+
+  // Enable behavior similar to Nuxt 3, all folders are not in app but in the root
+  srcDir: ".",
 
   modules: [
     "@nuxt/image",
@@ -11,6 +17,7 @@ export default defineNuxtConfig({
 
   image: {
     format: ["webp"],
+    provider: "static",
   },
 
   css: ["~/assets/css/main.css", "~/assets/css/global.scss"],
@@ -28,6 +35,27 @@ export default defineNuxtConfig({
       // tag.startsWith('add-') is used for https://add-to-calendar-button.com/
       isCustomElement: (tag) =>
         ["Nuxt"].includes(tag) || tag.startsWith("add-"),
+    },
+  },
+
+  hooks: {
+    "build:before"() {
+      const sourceDir = resolve("public/images/galeries/2024");
+      const outDir = resolve("assets/generated");
+
+      // ✅ Ensure output directory exists
+      if (!existsSync(outDir)) {
+        mkdirSync(outDir, { recursive: true });
+      }
+
+      const images = readdirSync(sourceDir)
+        .filter((f) => /\.(png|jpe?g|webp|avif)$/i.test(f))
+        .map((f) => `public/images/galeries/2024/${f}`);
+
+      writeFileSync(
+        resolve(outDir, "galerie-2024.json"),
+        JSON.stringify(images, null, 2)
+      );
     },
   },
 
