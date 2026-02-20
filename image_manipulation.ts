@@ -16,15 +16,23 @@ Usage:
 ```bash
 npx tsx image_manipulation.ts directory/containing/all/images
 ```
+
+An offset can be added if the filenames need to start at a specific number:
+```bash
+npx tsx image_manipulation.ts directory/containing/all/images 330
+```
 */
 
 const args = process.argv.slice(2);
 
-if (args.length !== 1) {
+if (args.length !== 1 && args.length !== 2) {
   console.log();
   console.log();
   console.log(
     "Usage: `npx tsx image_manipulation.ts directory/containing/all/images`"
+  );
+  console.log(
+    "An optional offset can be added: `npx tsx image_manipulation.ts directory/containing/all/images 330`"
   );
   console.log();
   console.log();
@@ -32,6 +40,13 @@ if (args.length !== 1) {
 }
 
 const dir = args[0];
+
+let imageOffset: number;
+if (args.length === 2) {
+  imageOffset = Number(args[1]);
+} else {
+  imageOffset = 0;
+}
 
 console.log(`Starting to prepare pictures from folder ${dir}`);
 
@@ -121,7 +136,7 @@ for (const image of images) {
     .resize({ width: 2048 })
     .jpeg({ progressive: true, force: false, quality: 100 })
     //.png({ progressive: true, force: false, quality: 80 })
-    .toFile(outputFolder + imageIndex + ".jpg");
+    .toFile(outputFolder + (imageIndex + imageOffset) + ".jpg");
 
   imageIndex += 1;
 }
