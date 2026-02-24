@@ -22,7 +22,7 @@
                         La scène devient alors le théâtre d'un choix impossible : Faut-il plaire à tout prix ou oser déranger ? Entre cancan endiablé, soif de
                         succès et poids du passé, Dernier Éclat vous entraîne derrière les rideaux d'un monde où monter sur scène peut tout changer.
                     </div>
-                    <YouTubeVideo video-id="pBNr88VB3q0" class="md:w-1/3" />
+                    <YouTubeVideo video-id="a-hcCB_eRNo" class="md:w-1/3" />
                 </div>
 
                 <!-- Buy a ticket -->
