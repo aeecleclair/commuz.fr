@@ -11,7 +11,7 @@
       <UCard class="group">
         <div class="w-96 flex flex-col items-center">
           <span
-            class="text-6xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-[length:200%_200%] bg-[position:0%_0%] text-transparent group-hover:bg-[position:100%_100%] bg-clip-text">
+            class="text-4xl font-bold rounded-xl transition-all duration-500 bg-gradient-to-tl from-fuchsia-800 via-blue-500 to-cyan-500 bg-[length:200%_200%] bg-[position:0%_0%] text-transparent group-hover:bg-[position:100%_100%] bg-clip-text">
             {{ card.title }}
           </span>
           <div
@@ -82,9 +82,9 @@ if (castingOpen.value) {
 else {
   // We may show a custom card
   card = {
-    href: "/spectacle/2025",
-    title: "FACE AU MUR",
-    desc: "La Commuz' présente son spectacle 2025 !",
+    href: "/spectacle/2026",
+    title: "DERNIER ÉCLAT",
+    desc: "La Commuz' présente son spectacle 2026 !",
   };
 }
 

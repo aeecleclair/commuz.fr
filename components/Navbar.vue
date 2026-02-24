@@ -9,7 +9,7 @@
         <NuxtLink active-class="navbar__link--active" to="/castings" class="navbar__link">Castings</NuxtLink>
       </li>
       <li class="navbar__item">
-        <NuxtLink active-class="navbar__link--active" to="/spectacle/2025" class="navbar__link">Commuz' 2025</NuxtLink>
+        <NuxtLink active-class="navbar__link--active" to="/spectacle/2026" class="navbar__link">Commuz' 2026</NuxtLink>
       </li>
       <li class="navbar__item">
         <NuxtLink active-class="navbar__link--active" to="/spectacle" class="navbar__link">Le spectacle</NuxtLink>
@@ -18,7 +18,7 @@
         <NuxtLink active-class="navbar__link--active" to="/galerie/2025" class="navbar__link">Les photos</NuxtLink>
       </li>
       <li class="navbar__item">
-        <NuxtLink active-class="navbar__link--active" to="/equipe/2025" class="navbar__link">L'équipe</NuxtLink>
+        <NuxtLink active-class="navbar__link--active" to="/equipe/2026" class="navbar__link">L'équipe</NuxtLink>
       </li>
       <li class="navbar__item">
         <NuxtLink active-class="navbar__link--active" to="/partenariats" class="navbar__link">Partenariats</NuxtLink>

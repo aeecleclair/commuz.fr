@@ -1,41 +1,20 @@
-
-Copy
-
 <template>
-  <div class="h-max">
-    <div class="relative h-full overflow-hidden flex flex-col justify-center items-center">
-
-      <!-- Content revealed after scroll -->
-      <div
-        class="content w-full h-full min-h-screen p-10 opacity-0 transition-opacity duration-1000"
-        :class="{ 'opacity-100': scrollPos > 0 }"
-      >
-        <div class="pt-10 h-max">
-          <slot />
-        </div>
+  <Transition name="fade">
+    <div v-if="!scrolled" class="rn-outer fixed inset-0 z-50 pointer-events-none">
+      <div class="rn-inner">
+        <div v-for="n in 10" :key="n" class="rn-unit" />
       </div>
-
-      <!-- Stripe overlay — collapses on scroll -->
-      <div
-        class="rn-outer absolute top-0 left-0 w-full h-[calc(100vh-48px)] transition-opacity duration-1000 pointer-events-none"
-        :class="{ 'opacity-0': scrollPos > 0 }"
-      >
-        <div class="rn-inner" :class="{ collapsed: scrollPos > 0 }">
-          <div v-for="n in 10" :key="n" class="rn-unit" />
-        </div>
-      </div>
-
     </div>
-  </div>
+  </Transition>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const scrollPos = ref(0)
+const scrolled = ref(false)
 
 const handleScroll = () => {
-  scrollPos.value = window.scrollY
+  if (window.scrollY > 0) scrolled.value = true
 }
 
 onMounted(() => {
@@ -66,13 +45,6 @@ onUnmounted(() => {
   bottom: 0;
   left: 0;
   margin: auto;
-  transform-style: preserve-3d;
-  transition: transform 1s ease;
-  transform-origin: -120% top;
-}
-
-.rn-inner.collapsed {
-  transform: scaleX(0);
 }
 
 .rn-unit {
@@ -84,17 +56,14 @@ onUnmounted(() => {
     var(--accent-darker) 8vw,
     var(--accent-light) 10vw
   );
-  background-size: 100% 100%;
   display: inline-block;
-  transform-origin: 0 0%;
+  transform-origin: 0 0;
   transform: rotate(3deg);
   animation: rnUnit 2s ease infinite;
 }
 
 @keyframes rnUnit {
-  50% {
-    transform: rotate(-3deg);
-  }
+  50% { transform: rotate(-3deg); }
 }
 
 .rn-unit:nth-child(1)  { animation-delay: -0.1s; }
@@ -107,4 +76,12 @@ onUnmounted(() => {
 .rn-unit:nth-child(8)  { animation-delay: -0.8s; }
 .rn-unit:nth-child(9)  { animation-delay: -0.9s; }
 .rn-unit:nth-child(10) { animation-delay: -1.0s; }
+
+/* Fade out transition when scrolled */
+.fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
