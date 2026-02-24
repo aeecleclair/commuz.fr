@@ -63,7 +63,7 @@
 
                             <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
                                 <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
-                                Face au Mur
+                                Dernier Éclat 
                             </div>
 
                             <span class="mb-2">Choisissez une représentation :</span>
