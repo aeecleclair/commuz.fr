@@ -12,6 +12,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const scrolled = ref(false)
+let timer: ReturnType<typeof setTimeout> | null = null
 
 const handleScroll = () => {
   if (window.scrollY > 0) scrolled.value = true
@@ -19,10 +20,15 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  
+  timer = setTimeout(() => {
+    scrolled.value = true
+  }, 2000)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  if (timer) clearTimeout(timer)
 })
 </script>
 
