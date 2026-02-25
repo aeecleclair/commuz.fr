@@ -1,15 +1,12 @@
-# Build Stage 1
+FROM nginx:alpine
 
-FROM node:25-alpine
+# Delete default nginx configuration
+RUN rm -rf /usr/share/nginx/html/*
 
-WORKDIR /
+COPY .output/public /usr/share/nginx/html
 
-COPY .output/ ./
-
-# Change the port and host
-ENV PORT=3000
-ENV HOST=0.0.0.0
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
 
-CMD ["node", "/server/index.mjs"]
+CMD ["nginx", "-g", "daemon off;"]
