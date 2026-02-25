@@ -1,9 +1,10 @@
 # Build Stage 1
 
 FROM node:25-alpine
+
 WORKDIR /
 
-COPY /.output/ ./
+COPY .output/ ./
 
 # Change the port and host
 ENV PORT=80
