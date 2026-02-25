@@ -1,24 +1,32 @@
+# Build Stage 1
+
 FROM node:25-alpine AS build
 WORKDIR /
 
-COPY package*.json .
+# Copy package.json and your lockfile, here we add pnpm-lock.yaml for illustration
+COPY package.json package-lock.json ./
+
+# Install dependencies
 RUN npm install
 
-COPY . .
+# Copy the entire project
+COPY . ./
 
-# Compiler l'application
-RUN npm run generate
+# Build the project
+RUN npm run build
 
-# Étape 2 : Serveur Nginx pour héberger l'app
-FROM nginx:alpine
+# Build Stage 2
 
-# Delete default nginx configuration
-RUN rm -rf /usr/share/nginx/html/*
+FROM node:25-alpine
+WORKDIR /
 
-COPY --from=build .output/public /usr/share/nginx/html
+# Only `.output` folder is needed from the build stage
+COPY --from=build /.output/ ./
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Change the port and host
+ENV PORT=80
+ENV HOST=0.0.0.0
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "/server/index.mjs"]
