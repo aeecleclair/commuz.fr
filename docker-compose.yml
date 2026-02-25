@@ -1,0 +1,8 @@
+services:
+  front:
+    build:
+      context: .
+    container_name: Commuz
+    ports:
+      - "3000:80"
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+node_modules/
+.output/
+dist
+.nuxt/
+
+# Git et IDE
+.git/
+.gitignore
+.vscode/
+.github/
