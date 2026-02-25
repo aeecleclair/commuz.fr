@@ -7,7 +7,7 @@
                 <div class="flex flex-col gap-10 md:gap-20 items-center">
                     <div class="text-5xl font-bold text-center">La Commuz' 2025 présente</div>
                     <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-around items-center">
-                        <NuxtImg src="images/spectacle/2025/FaceAuMur.png" alt="Face au Mur" class="h-64" />
+                        <NuxtImg src="images/spectacle/2025/faceaumur.png" alt="Face au Mur" class="h-64" />
                         <div class="md:w-1/2">
                             <span class="text-[var(--redLight2025)]">Berlin, 1989</span>. Trois jours après la chute du
                             Mur, tandis que la Stasi s’empresse
@@ -72,7 +72,7 @@
                                 class="inline-link">Achetez vos tickets !</NuxtLink>
                         </span>
 
-                        <NuxtImg src="images/spectacle/2025/Tombola.png" alt="Tombola" class="md:w-1/3" />
+                        <NuxtImg src="images/spectacle/2025/tombola.png" alt="Tombola" class="md:w-1/3" />
                     </div>
                 </div>
 
