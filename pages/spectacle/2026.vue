@@ -98,7 +98,7 @@ const dates = [
         link: "https://plusbilletterie.helloasso.com/evenements/69944cb861a41d7bfae95504"
     },
     {
-        text: "Dimanche 16 mars - 17h",
+        text: "Dimanche 15 mars - 17h",
         link: "https://plusbilletterie.helloasso.com/evenements/69944cc780c787e3b4ef5751"
     }
 ]
