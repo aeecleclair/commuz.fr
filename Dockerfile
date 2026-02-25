@@ -7,9 +7,9 @@ WORKDIR /
 COPY .output/ ./
 
 # Change the port and host
-ENV PORT=80
+ENV PORT=3000
 ENV HOST=0.0.0.0
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["node", "/server/index.mjs"]
