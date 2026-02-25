@@ -1,0 +1,9 @@
+node_modules/
+.output/
+dist
+
+# Git et IDE
+.git/
+.gitignore
+.vscode/
+.github/
