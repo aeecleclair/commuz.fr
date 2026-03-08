@@ -1,8 +1,8 @@
 <template>
     <div class="min-h-screen">
 
-       
-        <Spectacle2026Curtains/>
+
+        <Spectacle2026Curtains />
 
         <div class="pt-18 pb-5 px-10 md:px-40 flex flex-col gap-10 md:gap-40">
 
@@ -10,17 +10,22 @@
             <div class="flex flex-col gap-10 md:gap-20 items-center">
                 <div class="text-5xl font-bold text-center">La Commuz' 2026 présente</div>
                 <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-around items-center">
-                    <NuxtImg src="images/spectacle/2026/DernierEclat3.png" alt="Face au Mur" class="h-64" />
+                    <NuxtImg src="images/spectacle/2026/derniereclat3.png" alt="Face au Mur" class="h-64" />
                     <div class="md:w-1/2" style="text-align: justify;">
-                        <span class="text-[var(--redLight2025)]">Paris, 1923</span>. À l'Indigo, cabaret parisien où les plumes et les projecteurs font oublier
-                        le reste du monde, une étoile est en train de naître. Iris Lenoir enchaîne les triomphes sous l'œil attentif de son agent, Maurice. Mais
-                        alors que la capitale s'emballe pour sa nouvelle idole, le nouveau projet inattendu d'Odette, directrice de l'Indigo, vient diviser le cabaret.
+                        <span class="text-[var(--redLight2025)]">Paris, 1923</span>. À l'Indigo, cabaret parisien où les
+                        plumes et les projecteurs font oublier
+                        le reste du monde, une étoile est en train de naître. Iris Lenoir enchaîne les triomphes sous
+                        l'œil attentif de son agent, Maurice. Mais
+                        alors que la capitale s'emballe pour sa nouvelle idole, le nouveau projet inattendu d'Odette,
+                        directrice de l'Indigo, vient diviser le cabaret.
                     </div>
                 </div>
                 <div class="flex flex-col gap-10 md:gap-20 md:flex-row justify-around items-center">
                     <div class="md:w-2/3" style="text-align: justify;">
-                        La scène devient alors le théâtre d'un choix impossible : Faut-il plaire à tout prix ou oser déranger ? Entre cancan endiablé, soif de
-                        succès et poids du passé, Dernier Éclat vous entraîne derrière les rideaux d'un monde où monter sur scène peut tout changer.
+                        La scène devient alors le théâtre d'un choix impossible : Faut-il plaire à tout prix ou oser
+                        déranger ? Entre cancan endiablé, soif de
+                        succès et poids du passé, Dernier Éclat vous entraîne derrière les rideaux d'un monde où monter
+                        sur scène peut tout changer.
                     </div>
                     <YouTubeVideo video-id="a-hcCB_eRNo" class="md:w-1/3" />
                 </div>
@@ -28,7 +33,7 @@
                 <!-- Buy a ticket -->
                 <div class="flex justify-center">
                     <div class="relative w-2/3">
-                        <NuxtImg src="images/spectacle/2026/Billet.png" class="w-full block" />
+                        <NuxtImg src="images/spectacle/2026/billet.png" class="w-full block" />
                         <div class="absolute w-[20%] h-[43%] justify-center hidden md:flex flex-col"
                             style="right: 8.41%; bottom: 10%">
                         </div>
@@ -63,7 +68,7 @@
 
                             <div class="flex flex-row items-center gap-2 pb-2 text-[var(--redLight2025)] text-3xl">
                                 <UIcon name="i-heroicons-ticket" class="w-10 h-10" />
-                                Dernier Éclat 
+                                Dernier Éclat
                             </div>
 
                             <span class="mb-2">Choisissez une représentation :</span>
