@@ -58,7 +58,7 @@
         </div>
         <span v-for="date in dates" :key="date.text">{{ date.text }}</span>
 
-        <span class="italic mt-4 text-center">Les portes et la buvette ouvrent 1 heure avant le
+        <span class="italic mt-4 text-center">Les portes et la buvette ouvrent une demi-heure avant le
           début du spectacle.</span>
       </div>
     </div>

@@ -1,110 +1,55 @@
-
-Copy
-
 <template>
-  <div class="h-max">
-    <div class="relative h-full overflow-hidden flex flex-col justify-center items-center">
+    <div class="h-max ">
+        <div class="relative h-full overflow-hidden flex flex-col justify-center items-center">
 
-      <!-- Content revealed after scroll -->
-      <div
-        class="content w-full h-full min-h-screen p-10 opacity-0 transition-opacity duration-1000"
-        :class="{ 'opacity-100': scrollPos > 0 }"
-      >
-        <div class="pt-10 h-max">
-          <slot />
-        </div>
-      </div>
+            <div class="content w-full h-full min-h-screen p-10 opacity-0 transition-opacity duration-1000"
+                :class="{ 'opacity-100': scrollPos > 0 }">
 
-      <!-- Stripe overlay — collapses on scroll -->
-      <div
-        class="rn-outer absolute top-0 left-0 w-full h-[calc(100vh-48px)] transition-opacity duration-1000 pointer-events-none"
-        :class="{ 'opacity-0': scrollPos > 0 }"
-      >
-        <div class="rn-inner" :class="{ collapsed: scrollPos > 0 }">
-          <div v-for="n in 10" :key="n" class="rn-unit" />
+                <div class="pt-10 h-max">
+                    <slot />
+                </div>
+            </div>
+
+
+            <!-- 100vh-48px correspond to the height of the user screen minus the navbar which height is 48px -->
+            <div class="wall right-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
+                :class="{ 'opacity-0 duration-1000 pointer-events-none': scrollPos > 0 }">
+                <NuxtImg src="images/spectacle/2025/back_light.png" class="h-full" />
+            </div>
+
+            <div class="wall left-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
+                :class="{ '-translate-x-full pointer-events-none': scrollPos > 0 }">
+                <NuxtImg src="images/spectacle/2025/left.png" class="h-full" />
+            </div>
+            <div class="wall right-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
+                :class="{ 'translate-x-full pointer-events-none': scrollPos > 0 }">
+                <NuxtImg src="images/spectacle/2025/right.png" class="h-full" />
+            </div>
+
+            <div class="wall right-wall absolute top-0 h-[calc(100vh-48px)] transition-all duration-1000"
+                :class="{ 'opacity-0 duration-1000 pointer-events-none': scrollPos > 0 }">
+                <NuxtImg src="images/spectacle/2025/front_light.png" class="h-full" />
+            </div>
         </div>
-      </div>
+
 
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue';
 
-const scrollPos = ref(0)
+const scrollPos = ref(0);
 
 const handleScroll = () => {
-  scrollPos.value = window.scrollY
-}
+    scrollPos.value = window.scrollY;
+};
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+    window.addEventListener('scroll', handleScroll);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+    window.removeEventListener('scroll', handleScroll);
+});
 </script>
-
-<style scoped>
-.rn-outer {
-  --accent: hsl(360, 80%, 50%);
-  --accent-dark: hsl(360, 80%, 38%);
-  --accent-darker: hsl(360, 80%, 30%);
-  --accent-light: hsl(360, 80%, 70%);
-
-  background: var(--accent-dark);
-  overflow: hidden;
-}
-
-.rn-inner {
-  width: 100%;
-  position: absolute;
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  transform-style: preserve-3d;
-  transition: transform 1s ease;
-  transform-origin: -120% top;
-}
-
-.rn-inner.collapsed {
-  transform: scaleX(0);
-}
-
-.rn-unit {
-  width: 10vw;
-  height: 120vh;
-  background: repeating-linear-gradient(
-    to left,
-    var(--accent) 4vw,
-    var(--accent-darker) 8vw,
-    var(--accent-light) 10vw
-  );
-  background-size: 100% 100%;
-  display: inline-block;
-  transform-origin: 0 0%;
-  transform: rotate(3deg);
-  animation: rnUnit 2s ease infinite;
-}
-
-@keyframes rnUnit {
-  50% {
-    transform: rotate(-3deg);
-  }
-}
-
-.rn-unit:nth-child(1)  { animation-delay: -0.1s; }
-.rn-unit:nth-child(2)  { animation-delay: -0.2s; }
-.rn-unit:nth-child(3)  { animation-delay: -0.3s; }
-.rn-unit:nth-child(4)  { animation-delay: -0.4s; }
-.rn-unit:nth-child(5)  { animation-delay: -0.5s; }
-.rn-unit:nth-child(6)  { animation-delay: -0.6s; }
-.rn-unit:nth-child(7)  { animation-delay: -0.7s; }
-.rn-unit:nth-child(8)  { animation-delay: -0.8s; }
-.rn-unit:nth-child(9)  { animation-delay: -0.9s; }
-.rn-unit:nth-child(10) { animation-delay: -1.0s; }
-</style>
