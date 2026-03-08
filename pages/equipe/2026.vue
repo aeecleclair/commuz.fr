@@ -32,7 +32,7 @@ const presentation = {
         <p>
             La scène devient alors le théâtre d’un choix impossible : Faut-il plaire à tout prix ou oser déranger ? Entre cancan endiablé, soif de 
           succès et poids du passé, Dernier Éclat vous entraîne derrière les rideaux d’un monde où monter sur scène peut tout changer.
-        </p>        <p><i>Un merci particuler à Léa Serval pour son investissement dans la direction artistique de la Commuz' 2026.</i></p>        `,
+        </p>                `,
     bgImage: '/images/equipes/equipe--2026.jpg',
     image: '/images/affiches/affiche--2026.png',
 }
@@ -172,7 +172,20 @@ const equipe = {
             }
             
         ]
+    },
+
+     AideDA: {
+        pole: 'Participation à la Direction Artistique',
+        // logo: '/logos/poles/2024/visibilite.png',
+        personnes: [
+            {
+                role: 'Participante à la DA',
+                nom: 'Léa Serval',
+                photo: 'DA - Léa.jpg'
+            }
+        ]
     }, 
+    // pôle très spécial que pour cette année, ne pas réutiliser pour les années suivantes. (pb interne à la Commuz' 2026)
 
     ac: {
         pole: 'Acteurs-chanteurs',
