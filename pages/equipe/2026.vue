@@ -161,7 +161,7 @@ const equipe = {
             //     photo: 'DA - Léa.jpg'
             // },
             {
-                role: 'Metteuse en scène',
+                role: 'Metteur en scène',
                 nom: 'Matteo Bevilacqua',
                 photo: 'DA - Matteo.jpg'
             },
@@ -179,7 +179,7 @@ const equipe = {
         logo: '/logos/poles/2024/ac.png',
         personnes: [
             {
-                role: 'Acteur-chanteur',
+                role: 'Actrice-chanteuse',
                 nom: 'Clarence Rakotobe',
                 photo: 'AC - Clarence.jpg'
             },
@@ -199,7 +199,7 @@ const equipe = {
                 photo: 'AC - Alexandre.jpg'
             },
             {
-                role: 'Actrice-chanteuse',
+                role: 'Acteur-chanteur',
                 nom: 'Nael Zahir',
                 photo: 'AC - Nael.jpg'
             },
@@ -441,7 +441,7 @@ const equipe = {
                 photo: 'Danse - Daphne.jpg'
             },
             {
-                role: 'Danseuse',
+                role: 'Danseur',
                 nom: 'Baptiste Dupoux',
                 photo: 'Danse - Baptiste.jpg'
             },
@@ -525,7 +525,7 @@ const equipe = {
                 photo: 'Decors - Basile.jpg'
             },
             {
-                role: 'Décoratrice',
+                role: 'Décorateur',
                 nom: 'Guillaume Franchi',
                 photo: 'Decors - Guillaume.jpg'
             },
@@ -535,7 +535,7 @@ const equipe = {
                 photo: 'Decors - Nina.jpg'
             },
             {
-                role: 'Décoratrice',
+                role: 'Décorateur',
                 nom: 'Geoffrey Brunon',
                 photo: 'Decors - Geoffrey.jpg'
             },
