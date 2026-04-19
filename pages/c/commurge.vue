@@ -1,6 +1,6 @@
 <template lang="html">
   <div style="overflow-y: hidden;">
-    <audio id="commurge_audio" type="audio/mp3" src="/c/commurge/music/jul.mp3" autoplay loop />
+    <audio id="commurge_audio" type="audio/mp3" src="/c/commurge/jul.mp3" autoplay loop></audio>
 
     <div id="commurge__container">
       <div id="overlay_chope">
@@ -9,7 +9,6 @@
           <div id="match__pictures">
             <div id="chopeA" class="match__person">
               <img id="chopeA_photo" src="">
-              <!-- <div id="chopeA__photo" class="match__pictures"></div> -->
               <div class="match__description">
                 <p id="chopeA__name" class="match__names">Nom 1</p>
                 <p id="chopeA__desc">Viergee - INTJ</p>
@@ -17,7 +16,6 @@
             </div>
             <div id="chopeB" class="match__person">
               <img id="chopeB_photo" src="">
-              <!-- <div id="chopeB__photo" class="match__pictures"></div> -->
               <div class="match__description">
                 <p id="chopeB__name" class="match__names">Nom 1</p>
                 <p id="chopeB__desc">Viergee - INTJ</p>
@@ -32,7 +30,6 @@
           <div id="chopOrNot">
             <p />
             <p id="counter_no" style="color: #00FF00">0</p> / <p id="counter_yes" style="color: rgb(255, 0, 0)">0</p>
-
           </div>
         </div>
       </div>
@@ -48,184 +45,128 @@
 </template>
 
 <script>
-import * as anime from 'animejs';
+
+import { animate, createTimeline } from 'animejs';
 import rainingParticles from '~/includes/rainingParticles';
 
-const hashFunction = function (v, a, b, t) {
-  const string = v + a + b + t;
-
-  let hash = 0;
-
-  if (string.length == 0) return hash;
-
-  for (let i = 0; i < string.length; i++) {
-    const ch = string.charCodeAt(i);
-    hash = ((hash << 5) - hash) + ch;
-    hash = hash & hash;
-  }
-
-  return hash;
-}
-
-//We define the status of the Overlay
 let OverlayStatus = false;
 
-// Fait apparaitre les propositions de choppes.
 const openOverlay = function () {
+  if (commuzards.length < 2) {
+    alert("Les données ne sont pas encore chargées, réessaie dans un instant 😅");
+    return;
+  }
+
   const overlayChopeElt = document.getElementById('overlay_chope');
   const homeElt = document.getElementById('commurge__home');
   OverlayStatus = true;
 
-  // Timeline : voir documentation anime.js
-  const chopeTimeline = anime.timeline();
+  // v4: anime.timeline() → createTimeline()
+  const chopeTimeline = createTimeline();
 
-  chopeTimeline.add({
-    targets: homeElt,
+  chopeTimeline.add(homeElt, {
     opacity: [1, 0],
     duration: 500,
-    begin: function (anime) {
-      genChope();
-    },
-    complete: function (anime) {
-      homeElt.remove();
-    },
-  })
-  // Premier chargement des images
-  chopeTimeline.add({
-    targets: overlayChopeElt,
+    onBegin: function () { genChope(); },
+    onComplete: function () { homeElt.remove(); },
+  });
+
+  chopeTimeline.add(overlayChopeElt, {
     borderRadius: ['50%', '0%'],
     scale: [0, 1],
     duration: 2000,
     easing: 'easeInOutQuart',
-    begin: function () {
-      overlayChopeElt.style.display = 'flex';
-    },
-  })
+    onBegin: function () { overlayChopeElt.style.display = 'flex'; },
+  });
 
-  // Animation des émojies
-  anime({
-    targets: '.answer_chope',
+  // v4: anime({...}) → animate(targets, props)
+  animate('.answer_chope', {
     translateY: [-5, 5],
     rotateZ: [-5, 5],
-    autoplay: true,
     direction: 'alternate',
     loop: true,
     easing: 'easeInOutSine'
-  })
-
+  });
 }
 
 const commuzards = [];
-
 let canVote = true;
 
-// Mis à jours des photos
 const applyChope = function (commuzard, id) {
-  const chopeElt = document.getElementById(id)
   const chopeImg = document.getElementById(id + '_photo')
   const chopeName = document.getElementById(id + '__name')
   const chopeDesc = document.getElementById(id + '__desc')
-  //chopeImg.src = `/c/commurge/pictures/${commuzard[3]}`
-  chopeImg.src = `/images/equipes/2025/${commuzard[3]}`
+
+  chopeImg.src = `/images/equipes/2026/${commuzard[3]}`
+  chopeImg.style.width = 'min(280px, 80vw)'
+  chopeImg.style.maxHeight = '40vh'
+  chopeImg.style.objectFit = 'contain'
+  // in 2026, pics were too big to fit in the chope, might change from year to year
+
   chopeName.innerHTML = `${commuzard[0]}`
   chopeDesc.innerHTML = `${commuzard[4]} - ${commuzard[1]} - ${commuzard[2]}`
 }
 
-// Génération d'un couple
 const genChope = function () {
-
-  // Tirage au sort
   const chopeA = commuzards[1 + Math.floor(Math.random() * Math.floor(commuzards.length - 1))];
   let chopeB = commuzards[1 + Math.floor(Math.random() * Math.floor(commuzards.length - 1))];
   while (chopeA === chopeB) {
     chopeB = commuzards[1 + Math.floor(Math.random() * Math.floor(commuzards.length - 1))]
   }
-  // Mis à jour des photos
   applyChope(chopeA, 'chopeA');
   applyChope(chopeB, 'chopeB');
   canVote = true;
 }
 
-// Transistion d'un couple à l'autre 
 const genNouvelleChope = function () {
-
-  // Fase in and out des nouveaux chopes
-  const nouvellechopeTimeline = anime.timeline();
-  nouvellechopeTimeline.add({
-    targets: document.getElementById('overlay_chope'),
+  const overlayEl = document.getElementById('overlay_chope');
+  const t = createTimeline();
+  t.add(overlayEl, {
     borderRadius: ['0', '50%'],
     scale: [1, 0],
     duration: 500,
     easing: 'easeInOutQuart'
   });
-  nouvellechopeTimeline.add({
-    targets: document.getElementById('overlay_chope'),
+  t.add(overlayEl, {
     borderRadius: ['50%', '0%'],
     scale: [0, 1],
     duration: 500,
     easing: 'easeInOutQuart',
-    begin: function (anime) {
-      genChope()
-    }
+    onBegin: function () { genChope() }
   });
 }
 
-// Envoie réponse positive
 let count_no = 0;
 let count_yes = 0;
-// Compter superchope
 let count_super_chope = 0;
 
 const sendChope = function (answer) {
-
   if (canVote) {
     canVote = false;
-    //At each vote we actualise the count_super_chope and we add the emoji if it is useable !
     count_super_chope++;
     if (count_super_chope > 19) {
       document.getElementById('super_chope').innerHTML = "🤩";
     }
     if (['yes', 'no'].includes(answer)) {
-      // Construction de la requête
       if (answer === "yes") {
         rainingParticles(["🧡", "💜", "❤️", "🌼", "🌸"])
-        // Incrémentation du compteur
         count_yes++;
         document.getElementById('counter_yes').innerText = count_yes;
-      }
-      else {
+      } else {
         rainingParticles(["🤮", "💩"])
-        // Incrémentation du compteur
         count_no++;
         document.getElementById('counter_no').innerText = count_no;
       }
-
       const chopeA = document.getElementById('chopeA__name').innerHTML;
       const chopeB = document.getElementById('chopeB__name').innerHTML;
       const timestamp = Date.now().toString();
 
-      fetch('https://commurge.alwaysdata.net/vote', {
-        headers: {
-          "Content-Type": 'application/json',
-        },
+      genNouvelleChope();
+      fetch('/api/vote', {
+        headers: { "Content-Type": 'application/json' },
         method: 'POST',
-        body: JSON.stringify({
-          validay: answer,
-          chopeA: chopeA,
-          chopeB: chopeB,
-          timestamp: timestamp
-          // hash : hashFunction(answer, chopeA, chopeB, timestamp)  
-        })
-      })
-        .then(res => {
-          if (res.ok) {
-            genNouvelleChope()
-          }
-          else {
-            alert("Erreur 😿")
-          }
-        })
-        .catch(() => alert("Erreur 😭"))
+        body: JSON.stringify({ validay: answer, chopeA, chopeB, timestamp })
+      }).catch(err => console.warn("Vote non enregistré :", err));
     }
   }
 }
@@ -233,105 +174,47 @@ const sendChope = function (answer) {
 const sendSuperChope = function () {
   if (canVote && (count_super_chope > 19)) {
     canVote = false;
-    //On actualise count_super_chope et on enlève l'emoji
     count_super_chope -= 20;
-    if (count_super_chope < 20) {
-      document.getElementById('super_chope').innerHTML = " ";
-    }
+    if (count_super_chope < 20) { document.getElementById('super_chope').innerHTML = " "; }
     rainingParticles(["🧡", "💜", "❤️", "🌼", "🌸"])
-    // On boucle 2 fois pour envoyer 2 votes
     for (let i = 0; i < 2; i++) {
       count_yes++;
       document.getElementById('counter_yes').innerText = count_yes;
-
       const chopeA = document.getElementById('chopeA__name').innerHTML;
       const chopeB = document.getElementById('chopeB__name').innerHTML;
       const timestamp = Date.now().toString();
 
-      fetch('https://commurge.alwaysdata.net/vote', {
-        headers: {
-          "Content-Type": 'application/json',
-        },
+      fetch('/api/vote', {
+        headers: { "Content-Type": 'application/json' },
         method: 'POST',
-        body: JSON.stringify({
-          validay: "yes",
-          chopeA: chopeA,
-          chopeB: chopeB,
-          timestamp: timestamp
-          // hash : hashFunction(answer, chopeA, chopeB, timestamp)  
-        })
-      })
-        .then(res => {
-          if (res.ok) {
-            genNouvelleChope()
-          }
-          else {
-            alert("Erreur 😿")
-          }
-        })
-        .catch(() => alert("Erreur 😭"))
+        body: JSON.stringify({ validay: "yes", chopeA, chopeB, timestamp })
+      }).catch(err => console.warn("Vote non enregistré :", err));
     }
+    genNouvelleChope();
   }
 }
 
-
 const handleKeyDown = function (event) {
   if (OverlayStatus) {
-    if (event.keyCode === 37 || event.key === 'ArrowLeft') {
-      this.sendChope('no');
-    } else if (event.keyCode === 39 || event.key === 'ArrowRight') {
-      this.sendChope('yes');
-    } else if (event.keyCode == 38 || event.key === 'ArrowUp') {
-      this.sendSuperChope();
-    }
+    if (event.keyCode === 37 || event.key === 'ArrowLeft') { this.sendChope('no'); }
+    else if (event.keyCode === 39 || event.key === 'ArrowRight') { this.sendChope('yes'); }
+    else if (event.keyCode == 38 || event.key === 'ArrowUp') { this.sendSuperChope(); }
   }
 }
 
 export default defineComponent({
   setup() {
-    definePageMeta({
-      layout: "conchiage",
-      name: "Site des chopes",
-    });
+    definePageMeta({ layout: "conchiage", name: "Site des chopes" });
   },
-  watch: {
-    canActivateSuperChope: function () {
-      if (this.count_super_chope > 19) {
-        document.getElementById('super_chope').innerHTML = "🤩";
-      }
-    }
-  }, //
   mounted: async function () {
-
-    //await fetch('http://localhost:3000/c/commurge/infos.csv')
-    //  .then((response) => response.text())
-    //  .then(csv => csv.split('\n'))
-    //  .then(t => { t.forEach(e => commuzards.push(e.split(';'))) })
-
-
     await fetch('/c/commurge/infos.csv')
       .then((response) => response.text())
       .then(csv => csv.split('\n'))
       .then(t => { t.forEach(e => commuzards.push(e.split(';'))) })
-    //let chansons = ['boom.mp3', 'chimai.mp3', 'dion.mp3', 'feuxamour.mp3', 'jul.mp3', 'queen.mp3'];
-    //let i = Math.floor(Math.random() * Math.floor(chansons.length));
-    //document.getElementById('commurge_audio').src = `/c/commurge/music/${chansons[i]}`;
-    anime({
-      targets: '#desk',
-      autoplay: true,
-      rotateY: [-20, 20],
-      direction: 'alternate',
-      loop: true,
-      easing: 'easeInOutSine'
-    });
-    anime({
-      targets: '#show_chope',
-      autoplay: true,
-      scale: [1, 1.1],
-      direction: 'alternate',
-      loop: true,
-      easing: 'easeInOutSine'
-    });
+      .catch(err => console.error('Impossible de charger infos.csv :', err));
+
+    animate('#desk', { rotateY: [-20, 20], direction: 'alternate', loop: true, easing: 'easeInOutSine' });
+    animate('#show_chope', { scale: [1, 1.1], direction: 'alternate', loop: true, easing: 'easeInOutSine' });
     window.addEventListener('keydown', this.handleKeyDown);
   },
   beforeUnmount() {
@@ -339,7 +222,6 @@ export default defineComponent({
   },
   methods: { openOverlay, sendChope, rainingParticles, handleKeyDown, sendSuperChope }
 })
-
 </script>
 
 
@@ -414,7 +296,6 @@ export default defineComponent({
   }
 }
 
-
 #chopOrNot {
   display: flex;
   justify-content: space-around;
@@ -425,14 +306,8 @@ export default defineComponent({
     margin: 0;
   }
 
-  #send_chope {
-    cursor: pointer;
-  }
-
-  #send_no_chope {
-    cursor: pointer;
-  }
-
+  #send_chope,
+  #send_no_chope,
   #super_chope {
     cursor: pointer;
   }
@@ -447,7 +322,6 @@ export default defineComponent({
   transform: translate(-50%, -50%);
   width: 35vw;
 }
-
 
 #commurge__container {
   height: 100%;
@@ -472,7 +346,6 @@ export default defineComponent({
     grid-template-rows: repeat(5, 20%);
     height: 100%;
 
-    // Bouton "Découvrir une choppe"
     .commurge__button {
       grid-area: 4/1/5/4;
       z-index: 2;
