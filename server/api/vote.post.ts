@@ -3,7 +3,7 @@
 import { appendFileSync } from 'fs';
 import { resolve } from 'path';
 
-const VOTES_FILE = resolve('./votes.ndjson');
+const VOTES_FILE = resolve('/app/data/votes.ndjson');
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
