@@ -6,3 +6,11 @@ services:
     ports:
       - "3000:3000"
     restart: unless-stopped
+    environment:
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=3000
+    volumes:
+      - votes_data:/app/data
+
+volumes:
+  votes_data:
