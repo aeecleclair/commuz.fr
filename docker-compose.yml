@@ -9,8 +9,9 @@ services:
     environment:
       - NUXT_HOST=0.0.0.0
       - NUXT_PORT=3000
+      - VOTES_FILE=/app/data/votes.ndjson
     volumes:
       - votes_data:/app/data
-
+ 
 volumes:
   votes_data:
