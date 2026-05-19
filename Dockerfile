@@ -8,6 +8,8 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+COPY public ./public
+
 # Copy project files
 COPY . .
 
