@@ -2,9 +2,14 @@ node_modules/
 
 dist
 .nuxt/
+.output/
 
 # Git et IDE
 .git/
 .gitignore
 .vscode/
 .github/
+.vscode/
+
+Dockerfile
+docker-compose.yml
