@@ -10,7 +10,7 @@
             <div class="flex flex-col gap-10 md:gap-20 items-center">
                 <div class="text-5xl font-bold text-center">La Commuz' 2026 présente</div>
                 <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-around items-center">
-                    <NuxtImg src="images/spectacle/2026/derniereclat3.png" alt="Face au Mur" class="h-64" />
+                    <NuxtImg src="images/spectacle/2026/derniereclat3.png" alt="Dernier Éclat" class="h-64" />
                     <div class="md:w-1/2" style="text-align: justify;">
                         <span class="text-[var(--redLight2025)]">Paris, 1923</span>. À l'Indigo, cabaret parisien où les
                         plumes et les projecteurs font oublier
