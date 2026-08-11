@@ -9,7 +9,7 @@
           <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf" download>
             plaquette partenariats
           </a>,
-          ou contactez notre responsable partenariat Alix à l'adresse
+          ou contactez notre responsable partenariat Pierre à l'adresse
           <a href="mailto:partenariat@commuz.fr">
             partenariat@commuz.fr
           </a>
@@ -38,11 +38,11 @@
 <script>
 const respoPartenariats = {
   respo1: {
-    prenom: "Alix",
-    nom: "Laroche",
-    telephone: "06 41 96 80 66",
+    prenom: "Pierre",
+    nom: "Homsi",
+    telephone: "07 66 64 90 20",
     mail: "commuzlyon@gmail.com",
-    image: "/images/Partenaires/Alix.jpeg",
+    image: "/images/Partenaires/Pierre.jpeg",
   },
 };
 
