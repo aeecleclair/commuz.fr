@@ -6,7 +6,7 @@
       <div id="plaquette">
         <p>
           Téléchargez notre
-          <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz_2025.pdf" download>
+          <a class="inline-link" href="/partenariats/Plaquette_Partenariats_Commuz27.pdf" download>
             plaquette partenariats
           </a>,
           ou contactez notre responsable partenariat Pierre à l'adresse
