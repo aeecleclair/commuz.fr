@@ -26,6 +26,7 @@ Le site est une refonte menée par Étienne Sanguinetti, inspirée d'un premier 
 - Frédéric Legrand : Webmestre du mandat 2023 - 2024 ;
 - Armand Didierjean : Webmestre du mandat 2024 - 2025 ;
 - Charlotte Demode : Webmestre du mandat 2025 - 2026;
+- Léo Zawojowski : Webmestre du mandat 2026 - 2027;
 
 # Guides
 
