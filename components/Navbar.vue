@@ -23,6 +23,9 @@
       <li class="navbar__item">
         <NuxtLink active-class="navbar__link--active" to="/partenariats" class="navbar__link">Partenariats</NuxtLink>
       </li>
+      <li class="navbar__item">
+        <NuxtLink active-class="navbar__link--active" to="/castings" class="navbar__link">Castings 2027</NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
