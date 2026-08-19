@@ -28,9 +28,9 @@
           <span class="font-bold">Castings anticipés</span>
           Réservés aux 2A/3A/4A de l'emlyon et Centrale.
           <br />
-          Inscription entre le 8 août et le 17 septembre
+          Inscription à partir du 19 août
           <AnimatedNuxtLink text="Formulaire d'inscription" target="_blank"
-            to="https://docs.google.com/forms/d/e/1FAIpQLSfSXolt-PMM8c7XBdwA6NHZtXAUnjglKZDcd4E10RjSWU9yvA/viewform"
+            to="https://docs.google.com/forms/d/e/1FAIpQLSdmPmtsm6x1kJzGjgT4oQvj79eUP0DqDkG6zZ9q1_YqkJXO3w/viewform"
             lefticon="i-heroicons-link" />
         </span>
       </div>
@@ -75,25 +75,18 @@
 </template>
 
 <script setup lang="ts">
-const castingsAvancesOpen = false;
+const castingsAvancesOpen = true;
 const castingsGenerauxOpen = false;
-const castingsComplementairesOpen = true;
-const year = 2026;
+const castingsComplementairesOpen = false;
+const year = 2027;
 
 
 const poles = [
-  {
-    name: "Danseur.euse",
-    description: `Le pôle danse met les tableaux en mouvement et fait vibrer les spectateurs ! C’est aussi beaucoup de rires, d’ambiance et de bienveillance ! Peu importe votre niveau et votre style de danse (jazz, classique, hip hop, contempo ou autre !), tentez votre chance, on est open à tout ! L’objectif c’est avant tout de
-vivre une expérience incroyable tous ensemble et de KIFFER !`,
-    imageFolder: "danse"
-  },
-
   /* Castings septembre */
   
   {
     name: "Acteur.rice chanteur.euse",
-    description: `Incarnez un des personnages qui donneront vie à la Commuz’ 2025, et vivez une incroyable aventure artistique et humaine. Pas besoin d’expérience préalable, nous vous accompagnerons avec un coaching individuel en théâtre, en chant et en danse, pour faire de vous une bête de scène !`,
+    description: `Incarnez un des personnages qui donneront vie à la Commuz’ 2027, et vivez une incroyable aventure artistique et humaine. Pas besoin d’expérience préalable, nous vous accompagnerons avec un coaching individuel en théâtre, en chant et en danse, pour faire de vous une bête de scène !`,
     imageFolder: "ac"
   },
   {
@@ -136,6 +129,11 @@ unique, très prenante et parmi les plus gratifiantes qui soient. C’est simple
     imageFolder: "son"
   },
   {
+    name: "Respo Com'",
+    description: "Tant de possibilités s’offrent à toi et pourtant c’est la Visi qui t’appelle ! Sa mission ? Améliorer la visibilité de l’association et du spectacle en devenant Respo Com' ! Tu scrolles sur Insta en te disant “moi j’aurais fait mieux” ? Tu connais Canva ou Photoshop comme ta poche et t’as toujours une idée de story en tête ? Alors deviens Respo Com' pour créer l’univers visuel du spectacle, gérer les réseaux, donner vie à du contenu qui claque et s'éclater avec la team Visi et le Bureau !",
+    imageFolder: "video"
+  },
+  /*{
     name: "Vidéo",
     description: `Vous souhaitez apprendre à faire de belles vidéos ou encore perfectionner vos compétences de montage, ce poste est fait pour vous ! Au sein du pôle visibilité, vous aurez l’opportunité de travailler avec tous les pôles et de leur créer des souvenirs indélébiles à travers des trailers ou en filmant la Commuz’ le soir des représentations.`,
     imageFolder: "video"
@@ -146,7 +144,7 @@ unique, très prenante et parmi les plus gratifiantes qui soient. C’est simple
     description: `Le VP Partenariat à la Commuz, c’est le coup de pouce de tout le mandat pour obtenir des fonds servant à proposer un spectacle de qualité et de la nourriture pour les WER ! Cela permet de travailler avec tout le monde et d’apporter sa pierre à l’édifice sans nécessairement avoir besoin de talent artistique : venez avec l’envie de bien faire et vous pourrez vivre une expérience géniale au travers d’un projet annuel fabuleux !`,
     imageFolder: "partenariats"
   },
-  
+  */
   {
     name: "Amour",
     description: `Imaginer, préparer et servir des petits repas sains et
