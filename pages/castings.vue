@@ -128,6 +128,11 @@ unique, très prenante et parmi les plus gratifiantes qui soient. C’est simple
     description: "Vous souhaitez intégrer un pôle technique et développer de vraies compétences en manipulant du matériel professionnel ? Le pôle son vous ouvre les bras ! Confirmé ou débutant, armé de votre motivation et de votre bonne humeur, vous apprendrez comment sonoriser un orchestre entier avec du matériel sensationnel. Vous apprendrez aussi à mixer des musiques pour produire un album, à maîtriser les bruitages et à combattre les larsens.",
     imageFolder: "son"
   },
+  {
+    name: "Respo Com'",
+    description: "Tant de possibilités s’offrent à toi et pourtant c’est la Visi qui t’appelle ! Sa mission ? Améliorer la visibilité de l’association et du spectacle en devenant Respo Com' ! Tu scrolles sur Insta en te disant “moi j’aurais fait mieux” ? Tu connais Canva ou Photoshop comme ta poche et t’as toujours une idée de story en tête ? Alors deviens Respo Com' pour créer l’univers visuel du spectacle, gérer les réseaux, donner vie à du contenu qui claque et s'éclater avec la team Visi et le Bureau !",
+    imageFolder: "video"
+  },
   /*{
     name: "Vidéo",
     description: `Vous souhaitez apprendre à faire de belles vidéos ou encore perfectionner vos compétences de montage, ce poste est fait pour vous ! Au sein du pôle visibilité, vous aurez l’opportunité de travailler avec tous les pôles et de leur créer des souvenirs indélébiles à travers des trailers ou en filmant la Commuz’ le soir des représentations.`,
