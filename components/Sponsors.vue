@@ -3,10 +3,6 @@
     <div id="sponsors__text">
       <h1>Ils nous ont soutenus</h1>
       <p>Vous aussi, entrez en scène à nos côtés !</p>
-      <p>Téléchargez la <a class="inline-link" href="/Plaquette-2024.pdf" download>plaquette sponsors</a>, ou contactez
-        notre responsable partenariats Alix à l'adresse <a
-          href="mailto:partenariat@commuz.fr">partenariat@commuz.fr</a></p>
-
     </div>
     <div id="sponsors__logos">
       <a href="https://www.ec-lyon.fr/" target="_blank" rel="noopener">
