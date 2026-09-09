@@ -19,7 +19,7 @@
     "@iconify-json/ph": "^1.2.2",
     "@nuxt/eslint": "^1.15.2",
     "@nuxt/fonts": "^0.11.4",
-    "@nuxt/image": "^1.11.0",
+    "@nuxt/image": "^2.1.0",
     "@nuxt/scripts": "^0.11.13",
     "@nuxt/ui": "^3.3.7",
     "@types/youtube": "^0.1.2",
